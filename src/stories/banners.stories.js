@@ -1,6 +1,8 @@
 import React from "react"
 import Basic from "../components/banners/Basic"
 import ImageBanner from "../components/banners/ImageBanner"
+import GradientBanner from "../components/banners/Gradient"
+
 import "../App.css"
 
 export default {
@@ -44,6 +46,10 @@ export const ImageBannerWithDummyImage = () => (
   <ImageBanner
     header="Large Header"
     subHeader="Welcome to the page"
-    imageSrc="https://i.picsum.photos/id/866/1280/720.jpg"
+    imageSrc="https://i.picsum.photos/id/866/1920/1080.jpg"
   />
+)
+
+export const GradientBannerMoonlitAsteroid = () => (
+  <GradientBanner header="Large Header" subHeader="Welcome to the page" />
 )
