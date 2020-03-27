@@ -1,13 +1,14 @@
 import React from "react"
 import Basic from "../components/banners/Basic"
+import ImageBanner from "../components/banners/ImageBanner"
 import "../App.css"
 
 export default {
-  title: "Banners",
-  component: Basic
+  title: "Banners"
+  // component: Basic
 }
 
-export const BasicRedHeader = () => (
+export const BasicBannerWithRedBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
@@ -15,7 +16,7 @@ export const BasicRedHeader = () => (
   />
 )
 
-export const BasicBlackHeader = () => (
+export const BasicBannerWithBlackBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
@@ -23,7 +24,7 @@ export const BasicBlackHeader = () => (
   />
 )
 
-export const BasicBlueHeader = () => (
+export const BasicBannerWithBlueBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
@@ -31,10 +32,18 @@ export const BasicBlueHeader = () => (
   />
 )
 
-export const BasicOrangeHeader = () => (
+export const BasicBannerWithOrangeBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
     background="orange"
+  />
+)
+
+export const ImageBannerWithDummyImage = () => (
+  <ImageBanner
+    header="Large Header"
+    subHeader="Welcome to the page"
+    imageSrc="https://i.picsum.photos/id/866/1280/720.jpg"
   />
 )
