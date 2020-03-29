@@ -32,18 +32,6 @@ const Label = styled.label`
   font-size: 14px;
   margin-bottom: 12px;
 `
-const CheckBoxWrapper = styled.div`
-  position: relative;
-`
-const CheckBox = styled.input`
-  margin-right: 8px;
-  height: 25px;
-  width: 25px;
-
-  ::after {
-    background: black;
-  }
-`
 
 const Button = styled.button`
   outline: none;
@@ -68,11 +56,6 @@ const Flex = styled.div`
   display: flex;
   align-items: center;
 `
-const Text = styled.p`
-  margin: 0;
-  color: grey;
-  font-size: 18px;
-`
 
 const Divider = styled.div`
   height: 2px;
@@ -91,6 +74,69 @@ const DividerText = styled.div`
   background: white;
   font-weight: bold;
 `
+const D = styled.div`
+  .f {
+    background: red;
+    color: white;
+  }
+`
+const Checkbox = styled.label`
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: grey;
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  input:checked ~ .mark {
+    background-color: #000;
+  }
+  input:checked ~ .mark:after {
+    display: block;
+  }
+
+  .mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #f2f2f2;
+  }
+
+  .mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .mark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+`
+
 export default function index({
   emailLabel,
   passwordLabel,
@@ -109,8 +155,11 @@ export default function index({
         <Input placeholder={passwordPlaceholder}></Input>
         <Between>
           <Flex>
-            <CheckBox type="checkbox"></CheckBox>
-            <Text>{retainText}</Text>
+            <Checkbox>
+              {retainText}
+              <input type="checkbox" />
+              <span className="mark" />
+            </Checkbox>
           </Flex>
 
           <Link>{forgotPasswordText}</Link>
