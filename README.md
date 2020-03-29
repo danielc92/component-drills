@@ -1,3 +1,7 @@
+# Component Drills
+
+Building out components from assorted websites using `styled-components` in a `react` sandbox. Components are available via `storybook` (Run `yarn storybook`)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
