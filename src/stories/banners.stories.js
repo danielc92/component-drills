@@ -2,6 +2,8 @@ import React from "react"
 import Basic from "../components/banners/Basic"
 import ImageBanner from "../components/banners/ImageBanner"
 import GradientBanner from "../components/banners/Gradient"
+import Split from "../components/banners/BasicSplit"
+import faker from "faker"
 
 import "../App.css"
 
@@ -52,4 +54,13 @@ export const ImageBannerWithDummyImage = () => (
 
 export const GradientBannerMoonlitAsteroid = () => (
   <GradientBanner header="Large Header" subHeader="Welcome to the page" />
+)
+
+export const BasicSplit = () => (
+  <Split
+    title="Split banner title"
+    subTitle="Ea nisi consectetur id irure. Deserunt eu non adipisicing proident do. Ullamco ex exercitation elit pariatur ea et excepteur tempor sunt. Nostrud duis sunt voluptate dolor in enim. Mollit ad do elit dolore id labore consectetur culpa labore sit dolor."
+    buttonText="Learn more"
+    imageSrc={faker.image.imageUrl()}
+  />
 )
