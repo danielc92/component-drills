@@ -81,19 +81,23 @@ const D = styled.div`
   }
 `
 const Checkbox = styled.label`
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 18px;
-  color: grey;
   margin: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  height: 25px;
 
+  .text {
+    color: grey;
+    font-size: 16px;
+  }
   input {
     position: absolute;
     opacity: 0;
@@ -156,7 +160,7 @@ export default function index({
         <Between>
           <Flex>
             <Checkbox>
-              {retainText}
+              <span className="text">{retainText}</span>
               <input type="checkbox" />
               <span className="mark" />
             </Checkbox>
