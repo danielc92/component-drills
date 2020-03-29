@@ -1,14 +1,21 @@
 import React from "react"
 import styled from "styled-components"
+import faker from "faker"
+
+const CardGrid = styled.section`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 24px;
+`
 
 const Card = styled.div`
   border-radius: 4px;
-  max-width: 300px;
   border: 1px solid #f2f2f2;
 `
 
 const CardContent = styled.div`
-  padding: 12px;
+  padding: 16px;
 `
 
 const CardImage = styled.img`
@@ -16,12 +23,14 @@ const CardImage = styled.img`
   height: auto;
 `
 
-const Header = styled.h3`
+const Header = styled.h4`
   margin: 0 0 12px 0;
 `
 
 const Paragraph = styled.p`
   margin: 0 0 12px 0;
+  font-size: 12px;
+  line-height: 1.68;
 `
 
 const TagGroup = styled.div`
@@ -42,25 +51,29 @@ const Tag = styled.div`
 `
 function index() {
   return (
-    <Card>
-      <CardImage src="https://i.picsum.photos/id/868/1280/720.jpg" />
-      <CardContent>
-        <Header>Hello</Header>
-        <Paragraph>
-          Qui qui minim deserunt proident in fugiat ex voluptate exercitation.
-          Aute reprehenderit ullamco ea est aliquip consectetur Lorem cupidatat
-          cupidatapor aliqua eiusmod duis qui sunt officia occaecat dolore
-          consequat amet. Minim esse id aliqua minim sit cupidatat fugiat
-          consequat incididunt nulla.
-        </Paragraph>
-        <TagGroup>
-          <Tag background="red"># scene</Tag>
-          <Tag background="blue"># photo</Tag>
-          <Tag background="purple"># imagery</Tag>
-          <Tag background="blue"># something</Tag>
-        </TagGroup>
-      </CardContent>
-    </Card>
+    <CardGrid>
+      {new Array(8).fill(1).map((i, x) => (
+        <Card>
+          <CardImage src={`https://i.picsum.photos/id/${x}/1280/720.jpg`} />
+          <CardContent>
+            <Header>{faker.name.firstName()}</Header>
+            <Paragraph>
+              Qui qui minim deserunt proident in fugiat ex voluptate
+              exercitation. Aute reprehenderitation. Aute reprehenderit ullamco
+              ea est aliquip didunt nulla.
+            </Paragraph>
+            <TagGroup>
+              {faker.random
+                .words(3)
+                .split(" ")
+                .map(word => (
+                  <Tag background="crimson"># {word}</Tag>
+                ))}
+            </TagGroup>
+          </CardContent>
+        </Card>
+      ))}
+    </CardGrid>
   )
 }
 
