@@ -1,5 +1,17 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+const Section = styled.section`
+  display: flex;
+`
+
+const CtaHeader = styled.h1`
+  font-size: 56px;
+  width: 500px;
+  font-family: "Lora", serif;
+  padding-top: 80px;
+  transform: translateX(120px);
+  z-index: 50;
+`
 
 const Wrapper = styled.div`
   background: #baf7d6;
@@ -81,26 +93,31 @@ class index extends Component {
   render() {
     const { items } = this.props
     return (
-      <Wrapper>
-        <Quote>{QuoteSvg()}</Quote>
-        {items.map((i, index) => (
-          <CarouselItem active={index === this.state.activeItem}>
-            <Text>{i.text}</Text>
-            <AuthorWrapper>
-              <AuthorImage src={i.authorUrl}></AuthorImage>
-              <AuthorText>{i.authorName}</AuthorText>
-            </AuthorWrapper>
-          </CarouselItem>
-        ))}
-        <CarouselButtons>
+      <Section>
+        <CtaHeader>
+          We have millions of readers from around the globe.
+        </CtaHeader>
+        <Wrapper>
+          <Quote>{QuoteSvg()}</Quote>
           {items.map((i, index) => (
-            <CarouselButton
-              active={index === this.state.activeItem}
-              onClick={() => this.setState({ activeItem: index })}
-            ></CarouselButton>
+            <CarouselItem active={index === this.state.activeItem}>
+              <Text>{i.text}</Text>
+              <AuthorWrapper>
+                <AuthorImage src={i.authorUrl}></AuthorImage>
+                <AuthorText>{i.authorName}</AuthorText>
+              </AuthorWrapper>
+            </CarouselItem>
           ))}
-        </CarouselButtons>
-      </Wrapper>
+          <CarouselButtons>
+            {items.map((i, index) => (
+              <CarouselButton
+                active={index === this.state.activeItem}
+                onClick={() => this.setState({ activeItem: index })}
+              ></CarouselButton>
+            ))}
+          </CarouselButtons>
+        </Wrapper>
+      </Section>
     )
   }
 }
