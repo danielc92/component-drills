@@ -6,7 +6,8 @@ const NavigationWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f8f8f8;
+  background: ${props => props.background};
+  color: ${props => props.color};
 `
 const Logo = styled.a`
   font-weight: bold;
@@ -32,19 +33,21 @@ const NavigationItem = styled.a`
   }
 
   :hover {
-    background-color: #f2f2f2;
+    background-color: ${props => props.backgroundHover};
   }
 `
 
-export default function index() {
+export default function index({ color, background, backgroundHover }) {
   return (
-    <NavigationWrapper>
+    <NavigationWrapper color={color} background={background}>
       <Logo>Navbar</Logo>
       <NavigationItems>
-        <NavigationItem>Home</NavigationItem>
-        <NavigationItem>About</NavigationItem>
-        <NavigationItem>Contact</NavigationItem>
-        <NavigationItem>Media</NavigationItem>
+        <NavigationItem backgroundHover={backgroundHover}>Home</NavigationItem>
+        <NavigationItem backgroundHover={backgroundHover}>About</NavigationItem>
+        <NavigationItem backgroundHover={backgroundHover}>
+          Contact
+        </NavigationItem>
+        <NavigationItem backgroundHover={backgroundHover}>Media</NavigationItem>
       </NavigationItems>
     </NavigationWrapper>
   )
