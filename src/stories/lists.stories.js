@@ -1,6 +1,8 @@
 import React from "react"
 import "../App.css"
+import faker from "faker"
 import VideoList from "../components/lists/VideoList"
+import FacebookFriends from "../components/lists/FacebookFriendList"
 
 export default {
   title: "Lists"
@@ -36,3 +38,42 @@ const data = [
 export const YoutubeVideoList = () => {
   return data.map(item => <VideoList {...item} />)
 }
+
+const friends = [
+  {
+    src: faker.image.imageUrl(),
+    name: faker.name.firstName() + " " + faker.name.lastName(),
+    buttonText: "Add friend",
+    buttonText2: "Remove",
+    mutualText: "5 Mutual friends."
+  },
+  {
+    src: faker.image.imageUrl(),
+    name: faker.name.firstName() + " " + faker.name.lastName(),
+    buttonText: "Add friend",
+    buttonText2: "Remove",
+    mutualText: "5 Mutual friends."
+  },
+  {
+    src: faker.image.imageUrl(),
+    name: faker.name.firstName() + " " + faker.name.lastName(),
+    buttonText: "Add friend",
+    buttonText2: "Remove",
+    mutualText: "5 Mutual friends."
+  },
+  {
+    src: faker.image.imageUrl(),
+    name: faker.name.firstName() + " " + faker.name.lastName(),
+    buttonText: "Add friend",
+    buttonText2: "Remove",
+    mutualText: "5 Mutual friends."
+  },
+  {
+    src: faker.image.imageUrl(),
+    name: faker.name.firstName() + " " + faker.name.lastName(),
+    buttonText: "Add friend",
+    buttonText2: "Remove",
+    mutualText: "5 Mutual friends."
+  }
+]
+export const FacebookFriendList = () => <FacebookFriends friends={friends} />

@@ -58,7 +58,7 @@ const Flex = styled.div`
 `
 
 const Divider = styled.div`
-  height: 2px;
+  height: 1px;
   background: #c4c4c4;
   position: relative;
   margin-bottom: 24px;
@@ -74,12 +74,7 @@ const DividerText = styled.div`
   background: white;
   font-weight: bold;
 `
-const D = styled.div`
-  .f {
-    background: red;
-    color: white;
-  }
-`
+
 const Checkbox = styled.label`
   display: flex;
   align-items: center;
