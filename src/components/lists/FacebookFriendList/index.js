@@ -30,6 +30,7 @@ const Info = styled.div`
 const Avatar = styled.img`
   width: 80px;
   height: 80px;
+  background-position: cover;
 `
 const Name = styled.a`
   font-size: 18px;

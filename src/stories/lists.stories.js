@@ -3,7 +3,11 @@ import "../App.css"
 import faker from "faker"
 import VideoList from "../components/lists/VideoList"
 import FacebookFriends from "../components/lists/FacebookFriendList"
-
+import face1 from "./images/face-1.png"
+import face2 from "./images/face-2.png"
+import face3 from "./images/face-3.png"
+import face4 from "./images/face-4.png"
+import face5 from "./images/face-5.png"
 export default {
   title: "Lists"
 }
@@ -41,35 +45,35 @@ export const YoutubeVideoList = () => {
 
 const friends = [
   {
-    src: faker.image.imageUrl(),
+    src: face1,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     buttonText: "Add friend",
     buttonText2: "Remove",
     mutualText: "5 Mutual friends."
   },
   {
-    src: faker.image.imageUrl(),
+    src: face2,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     buttonText: "Add friend",
     buttonText2: "Remove",
     mutualText: "5 Mutual friends."
   },
   {
-    src: faker.image.imageUrl(),
+    src: face3,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     buttonText: "Add friend",
     buttonText2: "Remove",
     mutualText: "5 Mutual friends."
   },
   {
-    src: faker.image.imageUrl(),
+    src: face4,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     buttonText: "Add friend",
     buttonText2: "Remove",
     mutualText: "5 Mutual friends."
   },
   {
-    src: faker.image.imageUrl(),
+    src: face5,
     name: faker.name.firstName() + " " + faker.name.lastName(),
     buttonText: "Add friend",
     buttonText2: "Remove",

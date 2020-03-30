@@ -2,7 +2,6 @@ import React from "react"
 import "../App.css"
 import OutlookButton from "../components/buttons/OutlookButton"
 import StorybookButton from "../components/buttons/StorybookButton"
-
 export default {
   title: "Buttons",
   component: OutlookButton
