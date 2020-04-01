@@ -11,7 +11,7 @@ export default {
 
 export const RealEstateBlog = () => (
   <RealEstate
-    title="Consequat consequat do eaure culpa adipisicing elit do ex et culpa exercitation."
+    title="Consequat adipisicing elit do ex et culpa exercitation."
     author="Daniel Corcoran"
     date="2020 April 23rd"
     content={[
@@ -46,6 +46,16 @@ export const RealEstateBlog = () => (
       {
         node: "image",
         value: image3
+      },
+      {
+        node: "paragraph",
+        value:
+          "Aliquip culpa velit laborum exercitation sit et Lorem qui officia consequat in cupidatat irure ut. Minim id id aliquip ullamco pariatur laboris enim ut ipsum in. Ad voluptate aute incididunt sunt eu in. Incididunt eiusmod ut eu ad velit veniam reprehenderit sunt."
+      },
+      {
+        node: "paragraph",
+        value:
+          "Aliqua do non proident ut quis nisi dolore quis excepteur cillum ea consectetur incididunt. Mollit culpa est incididunt sunt sint cupidatat labore nostrud cillum veniam et ex magna sit. Voluptate enim anim eu ullamco fugiat laboris magna dolore eu exercitation sint voluptate adipisicing. Enim quis ut pariatur cupidatat non mollit magna nisi nisi occaecat velit culpa. Cillum mollit culpa deserunt cupidatat culpa."
       }
     ]}
   />

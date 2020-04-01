@@ -33,6 +33,7 @@ const Date = styled.p`
 
 const QuoteNode = styled.p`
   font-size: 24px;
+  line-height: 1.58;
   font-style: italic;
   margin: 0;
 `
