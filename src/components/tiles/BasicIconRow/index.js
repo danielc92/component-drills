@@ -11,11 +11,14 @@ const Container = styled.div`
 
 const TileGrid = styled.div`
   display: grid;
-  gap: 32px;
+  gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 `
 const Tile = styled.div`
   text-align: center;
+  background: ${props => (props.background ? props.background : "")};
+  padding: 16px;
+  border-radius: 4px;
   /* display: flex;
   align-items: center;
   flex-direction: column; */
@@ -42,7 +45,7 @@ export default function index({ data }) {
       <Container>
         <TileGrid>
           {data.map(x => (
-            <Tile>
+            <Tile background={x.background}>
               <TileImage src={x.imageSrc} />
               <TileTitle>{x.title}</TileTitle>
               <TileText>{x.text}</TileText>

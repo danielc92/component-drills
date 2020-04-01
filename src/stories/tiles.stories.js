@@ -33,3 +33,6 @@ const data = [
 ]
 
 export const BasicIconRow = () => <Basic data={data} />
+export const BasicIconRowWithBackground = () => (
+  <Basic data={data.map(i => ({ ...i, background: "#d3e7ff" }))} />
+)
