@@ -10,7 +10,7 @@ const Wrapper = styled.section`
 `
 
 const Content = styled.div`
-  padding: 40px 125px;
+  padding: 80px 125px;
   display: grid;
   gap: 24px;
 `
