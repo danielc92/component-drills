@@ -16,15 +16,7 @@ export const BasicBannerWithRedBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
-    background="red"
-  />
-)
-
-export const BasicBannerWithBlackBackground = () => (
-  <Basic
-    header="Large Header"
-    subHeader="Welcome to the page"
-    background="black"
+    background="#d14b4b"
   />
 )
 
@@ -32,7 +24,7 @@ export const BasicBannerWithBlueBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
-    background="blue"
+    background="#3c60ad"
   />
 )
 
@@ -40,7 +32,7 @@ export const BasicBannerWithOrangeBackground = () => (
   <Basic
     header="Large Header"
     subHeader="Welcome to the page"
-    background="orange"
+    background="#d88b17"
   />
 )
 
