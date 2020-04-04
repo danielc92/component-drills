@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   display: grid;
   margin: 0 auto;
   gap: 48px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 `
 
 const Card = styled.div`
