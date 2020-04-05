@@ -6,6 +6,7 @@ const Card = styled.div`
   margin: auto;
   border: 1px solid #f2f2f2;
   border-radius: 2px;
+  box-shadow: 2px 2px 6px lightgray;
 `
 
 const ImageWrapper = styled.div`
@@ -22,12 +23,15 @@ const Image = styled.img`
 `
 
 const Avatar = styled.img`
+  object-fit: cover;
+  object-position: 50% 50%;
+
   width: 50px;
   height: 50px;
   border-radius: 50%;
   position: absolute;
   bottom: -25px;
-  padding: 5px;
+  padding: 3px;
   background: #fff;
   left: 42%;
 `

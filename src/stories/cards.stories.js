@@ -7,6 +7,7 @@ import Bona from "../components/cards/Bona"
 import image1 from "./images/harley-davidson-eeTJKC_wz34-unsplash.jpg"
 import image2 from "./images/jason-leung-DC5zm4FeBoI-unsplash.jpg"
 import image3 from "./images/taylor-simpson-2SX1LEMppsA-unsplash.jpg"
+import face1 from "./images/face-5.png"
 import svgComment from "./svg/comment.svg"
 import svgEye from "./svg/eye.svg"
 import svgHeart from "./svg/heart.svg"
@@ -66,7 +67,7 @@ export const SlackCards = () => (
 export const BonaCard = () => (
   <Bona
     title="Labore officia dolore sit quis et magna consequat in commodo."
-    authorImageSrc={image2}
+    authorImageSrc={face1}
     backgroundImageSrc={image3}
     viewImageSrc={svgEye}
     commentImageSrc={svgComment}
