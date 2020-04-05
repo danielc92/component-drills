@@ -3,9 +3,14 @@ import Basic from "../components/cards/Basic"
 import Dev from "../components/cards/DevToCard"
 import Slack from "../components/cards/SlackCards"
 import faker from "faker"
+import Bona from "../components/cards/Bona"
 import image1 from "./images/harley-davidson-eeTJKC_wz34-unsplash.jpg"
 import image2 from "./images/jason-leung-DC5zm4FeBoI-unsplash.jpg"
 import image3 from "./images/taylor-simpson-2SX1LEMppsA-unsplash.jpg"
+import svgComment from "./svg/comment.svg"
+import svgEye from "./svg/eye.svg"
+import svgHeart from "./svg/heart.svg"
+
 export default {
   title: "Cards",
 }
@@ -56,4 +61,18 @@ const cards = [
 ]
 export const SlackCards = () => (
   <Slack ctaText="What's new at Flack" cards={cards} />
+)
+
+export const BonaCard = () => (
+  <Bona
+    title="Labore officia dolore sit quis et magna consequat in commodo."
+    authorImageSrc={image2}
+    backgroundImageSrc={image3}
+    viewImageSrc={svgEye}
+    commentImageSrc={svgComment}
+    heartImageSrc={svgHeart}
+    statView={8}
+    statComment={43}
+    statLove={2}
+  />
 )
