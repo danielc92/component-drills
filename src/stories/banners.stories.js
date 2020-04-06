@@ -3,12 +3,14 @@ import Basic from "../components/banners/Basic"
 import ImageBanner from "../components/banners/ImageBanner"
 import GradientBanner from "../components/banners/Gradient"
 import Split from "../components/banners/BasicSplit"
+import Commbank from "../components/banners/Commbank"
 import faker from "faker"
+import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 
 import "../App.css"
 
 export default {
-  title: "Banners"
+  title: "Banners",
   // component: Basic
 }
 
@@ -33,6 +35,15 @@ export const BasicBannerWithOrangeBackground = () => (
     header="Large Header"
     subHeader="Welcome to the page"
     background="#d88b17"
+  />
+)
+
+export const CommbankBanner = () => (
+  <Commbank
+    image={image1}
+    ctaHeader="Lorem incididunt adipisicing commodo aute reprehenderit nostunt."
+    ctaSubHeader="Magna in elit sunt ad incididunt cillum nostrue qui consequat Lorem et anim."
+    ctaButtonText="Learn more"
   />
 )
 
