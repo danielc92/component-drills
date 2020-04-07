@@ -4,9 +4,9 @@ import ImageBanner from "../components/banners/ImageBanner"
 import GradientBanner from "../components/banners/Gradient"
 import Split from "../components/banners/BasicSplit"
 import Commbank from "../components/banners/Commbank"
+import Monday from "../components/banners/Monday"
 import faker from "faker"
 import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
-
 import "../App.css"
 
 export default {
@@ -57,6 +57,15 @@ export const ImageBannerWithDummyImage = () => (
 
 export const GradientBannerMoonlitAsteroid = () => (
   <GradientBanner header="Large Header" subHeader="Welcome to the page" />
+)
+
+export const MondayBanner = () => (
+  <Monday
+    title="Siagna sunt aliqua reprehquit ea excepteur quis non ut."
+    subTitle="Proident ea ullamco enim Lorem aliqua ate."
+    buttonText="Aliquip aliqua"
+    buttonLink="#"
+  />
 )
 
 export const BasicSplit = () => (
