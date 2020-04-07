@@ -5,7 +5,6 @@ import GradientBanner from "../components/banners/Gradient"
 import Split from "../components/banners/BasicSplit"
 import Commbank from "../components/banners/Commbank"
 import Monday from "../components/banners/Monday"
-import faker from "faker"
 import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 import "../App.css"
 

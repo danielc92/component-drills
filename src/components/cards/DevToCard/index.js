@@ -6,7 +6,7 @@ const Card = styled.div`
   padding: 16px;
   border: 1px solid darkgray;
   box-shadow: 3px 3px blue;
-  margin-bottom: 12px;
+  margin: 16px auto 16px auto;
   max-width: 500px;
 `
 
@@ -29,7 +29,7 @@ const Tag = styled.span`
 
 const Content = styled.div`
   display: flex;
-  justify-content: ${props => (props.between ? "space-between" : "")};
+  justify-content: ${(props) => (props.between ? "space-between" : "")};
 `
 
 const Button = styled.a`
@@ -60,7 +60,7 @@ export default function index({ imageSrc, title, tags, datePosted, readTime }) {
         <Image src={imageSrc} />
         <div>
           <Title>{title}</Title>
-          {tags.map(x => (
+          {tags.map((x) => (
             <Tag>#{x}</Tag>
           ))}
           <Timestamp>{datePosted}</Timestamp>
