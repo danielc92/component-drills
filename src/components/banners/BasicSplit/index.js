@@ -15,19 +15,19 @@ const Wrapper = styled.div`
 const ImageWrapper = styled.div`
   flex: 1;
   flex-wrap: wrap;
+  padding: 16px 8px;
 `
 const Image = styled.img`
   width: 100%;
-  max-height: 350px;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 4px;
-
-  padding: 40px;
 `
 
 const Content = styled.div`
   padding: 40px;
+  text-align: center;
   flex: 1;
   display: flex;
   flex-direction: column;
