@@ -1,6 +1,7 @@
 import React from "react"
 import Basic from "../components/cards/Basic"
 import Dev from "../components/cards/DevToCard"
+import DevBlog from "../components/cards/DevToBlogCard"
 import Slack from "../components/cards/SlackCards"
 import faker from "faker"
 import Bona from "../components/cards/Bona"
@@ -20,8 +21,12 @@ let DevCardData = []
 
 for (let i = 0; i < 7; i++) {
   const data = {
+    tagline: faker.lorem.words(4),
+    authorName: faker.name.firstName() + " " + faker.name.lastName(),
+    authorSrc: face1,
     imageSrc: faker.image.imageUrl(),
-    title: faker.lorem.text().substring(0, 40),
+    title: faker.lorem.words(4),
+    text: faker.lorem.words(45),
     tags: faker.lorem.words().split(" "),
     datePosted: "10 March",
     readTime: `${faker.random.number(32)} Minutes`,
@@ -33,8 +38,12 @@ export const BasicCard = () => {
   return <Basic />
 }
 
-export const DevToCard = () => {
+export const DevToListCard = () => {
   return DevCardData.map((i) => <Dev {...i} />)
+}
+
+export const DevToBlogCard = () => {
+  return DevCardData.map((i) => <DevBlog {...i} />)
 }
 
 const cards = [
