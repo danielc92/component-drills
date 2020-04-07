@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  padding: 40px 0;
 `
 const ImageWrapper = styled.div`
   flex: 1;
@@ -21,12 +22,13 @@ const Image = styled.img`
 `
 
 const Content = styled.div`
-  padding: 32px;
+  padding: 40px;
   flex: 1;
 `
 
 const Header = styled.h1`
   margin: 0 0 24px;
+  font-size: 48px;
 `
 
 const Paragraph = styled.p`
@@ -36,19 +38,18 @@ const Paragraph = styled.p`
 `
 
 const Button = styled.a`
-  border: 1px solid #37bace;
-  color: #37bace;
+  border: 2px solid #3d3d3d;
+  color: #3d3d3d;
   font-size: 18px;
   text-align: center;
   display: block;
   background-color: white;
   border-radius: 4px;
   padding: 16px;
-  transition: all 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
-  box-shadow: 5px 5px 5px 2px #d3d3d3;
+  transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :hover {
-    background-color: #37bace;
+    background-color: #3d3d3d;
     color: white;
   }
 `

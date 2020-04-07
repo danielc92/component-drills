@@ -70,9 +70,9 @@ export const MondayBanner = () => (
 
 export const BasicSplit = () => (
   <Split
-    title="Split banner title"
-    subTitle="Ea nisi consectetur id irure. Deserunt eu non adipisicing proident do. Ullamco ex exercitation elit pariatur ea et excepteur tempor sunt. Nostrud duis sunt voluptate dolor in enim. Mollit ad do elit dolore id labore consectetur culpa labore sit dolor."
-    buttonText="Learn more"
-    imageSrc={faker.image.imageUrl()}
+    title="Nulla incididunt"
+    subTitle="Excepteur tempor sunt. Nostrud duis sunt voluptate dolor in enim. Mollit ad do elit dolore id labore consectetur culpa labore sit dolor."
+    buttonText="Lorem Ipsum"
+    imageSrc={image1}
   />
 )
