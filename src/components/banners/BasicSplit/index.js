@@ -7,6 +7,10 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 40px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 const ImageWrapper = styled.div`
   flex: 1;
@@ -18,12 +22,17 @@ const Image = styled.img`
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 4px;
-  box-shadow: 5px 5px 5px 2px #d3d3d3;
+
+  padding: 40px;
 `
 
 const Content = styled.div`
   padding: 40px;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 const Header = styled.h1`
@@ -45,7 +54,7 @@ const Button = styled.a`
   display: block;
   background-color: white;
   border-radius: 4px;
-  padding: 16px;
+  padding: 16px 32px;
   transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   :hover {
