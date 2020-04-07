@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const Banner = styled.div`
-  background: ${props => props.background};
+  background: ${(props) => props.background};
   color: white;
   text-align: center;
-  padding: 48px 0;
+  padding: 80px 0;
 `
 
 const Header = styled.h1`

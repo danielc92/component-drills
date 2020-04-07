@@ -55,8 +55,28 @@ export const ImageBannerWithDummyImage = () => (
   />
 )
 
-export const GradientBannerMoonlitAsteroid = () => (
-  <GradientBanner header="Large Header" subHeader="Welcome to the page" />
+export const GradientBannerSublimeLight = () => (
+  <GradientBanner
+    type="sublimeLight"
+    header="Nostrud et magna"
+    subHeader="Minim laborum laborum cillum nisi except"
+  />
+)
+
+export const GradientBannerQuepal = () => (
+  <GradientBanner
+    type="quepal"
+    header="Nostrud et magna"
+    subHeader="Minim laborum laborum cillum nisi except"
+  />
+)
+
+export const GradientBannerKingYna = () => (
+  <GradientBanner
+    type="kingYna"
+    header="Nostrud et magna"
+    subHeader="Minim laborum laborum cillum nisi except"
+  />
 )
 
 export const MondayBanner = () => (
