@@ -4,8 +4,11 @@ import ImageBanner from "../components/banners/ImageBanner"
 import GradientBanner from "../components/banners/Gradient"
 import Split from "../components/banners/BasicSplit"
 import Commbank from "../components/banners/Commbank"
+import Outlook from "../components/banners/Outlook"
 import Monday from "../components/banners/Monday"
 import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
+import image2 from "./images/omar-lopez-rwF_pJRWhAI-unsplash.jpg"
+
 import "../App.css"
 
 export default {
@@ -93,5 +96,14 @@ export const BasicSplit = () => (
     subTitle="Excepteur tempor sunt. Nostrud duis sunt voluptate dolor in enim. Mollit ad do elit dolore id labore consectetur culpa labore sit dolor."
     buttonText="Lorem Ipsum"
     imageSrc={image1}
+  />
+)
+
+export const OutlookBanner = () => (
+  <Outlook
+    ctaLevel1="Lorem Ipsum."
+    ctaLevel2="Aliqua irure."
+    ctaLevel3="Dolore sunt aliqu."
+    backgroundImageSrc={image2}
   />
 )
