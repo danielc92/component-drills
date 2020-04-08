@@ -10,6 +10,7 @@ import Monday from "../components/banners/Monday"
 import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 import image2 from "./images/omar-lopez-rwF_pJRWhAI-unsplash.jpg"
 import image3 from "./images/tobias-tullius-PXXtq6bp6cs-unsplash.jpg"
+import image4 from "./images/korie-cull-IzIME1jwjCY-unsplash.jpg"
 import "../App.css"
 
 export default {
@@ -110,7 +111,7 @@ export const TargetSplitBanner = () => (
       { text: "Tempor tempor ea culpa.", url: "#" },
       { text: "Nostrud in cupidatat.", url: "#" },
     ]}
-    imageSrc={image2}
+    imageSrc={image4}
   />
 )
 
