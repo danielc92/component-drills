@@ -1,5 +1,6 @@
 import React from "react"
 import Basic from "../components/banners/Basic"
+import Target from "../components/banners/TargetSplit"
 import ImageBanner from "../components/banners/ImageBanner"
 import GradientBanner from "../components/banners/Gradient"
 import Split from "../components/banners/BasicSplit"
@@ -8,7 +9,7 @@ import Outlook from "../components/banners/Outlook"
 import Monday from "../components/banners/Monday"
 import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 import image2 from "./images/omar-lopez-rwF_pJRWhAI-unsplash.jpg"
-
+import image3 from "./images/tobias-tullius-PXXtq6bp6cs-unsplash.jpg"
 import "../App.css"
 
 export default {
@@ -40,20 +41,20 @@ export const BasicBannerWithOrangeBackground = () => (
   />
 )
 
+export const BasicBannerWithBackgroundImage = () => (
+  <ImageBanner
+    header="Consequat dolor enim"
+    subHeader="Aliquip ut minim aliqua magna aliqua ex voluptate."
+    imageSrc={image3}
+  />
+)
+
 export const CommbankBanner = () => (
   <Commbank
     image={image1}
     ctaHeader="Lorem incididunt adipisicing commodo aute reprehenderit nostunt."
     ctaSubHeader="Magna in elit sunt ad incididunt cillum nostrue qui consequat Lorem et anim."
     ctaButtonText="Learn more"
-  />
-)
-
-export const ImageBannerWithDummyImage = () => (
-  <ImageBanner
-    header="Large Header"
-    subHeader="Welcome to the page"
-    imageSrc="https://i.picsum.photos/id/866/1920/1080.jpg"
   />
 )
 
@@ -96,6 +97,20 @@ export const BasicSplit = () => (
     subTitle="Excepteur tempor sunt. Nostrud duis sunt voluptate dolor in enim. Mollit ad do elit dolore id labore consectetur culpa labore sit dolor."
     buttonText="Lorem Ipsum"
     imageSrc={image1}
+  />
+)
+
+export const TargetSplitBanner = () => (
+  <Target
+    title="Exercitation nulla duis"
+    links={[
+      { text: "Cupidatat duis.", url: "#" },
+      { text: "Incididunt.", url: "#" },
+      { text: "Eu anim Lorem dolor.", url: "#" },
+      { text: "Tempor tempor ea culpa.", url: "#" },
+      { text: "Nostrud in cupidatat.", url: "#" },
+    ]}
+    imageSrc={image2}
   />
 )
 

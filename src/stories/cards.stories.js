@@ -12,6 +12,7 @@ import face1 from "./images/face-5.png"
 import svgComment from "./svg/comment.svg"
 import svgEye from "./svg/eye.svg"
 import svgHeart from "./svg/heart.svg"
+import { CenterHorizontalAndVertical } from "./layout"
 
 export default {
   title: "Cards",
@@ -74,15 +75,17 @@ export const SlackCards = () => (
 )
 
 export const BonaCard = () => (
-  <Bona
-    title="Labore officia dolore sit quis et magna consequat in commodo."
-    authorImageSrc={face1}
-    backgroundImageSrc={image3}
-    viewImageSrc={svgEye}
-    commentImageSrc={svgComment}
-    heartImageSrc={svgHeart}
-    statView={8}
-    statComment={43}
-    statLove={2}
-  />
+  <CenterHorizontalAndVertical>
+    <Bona
+      title="Labore officia dolore sit quis et magna consequat in commodo."
+      authorImageSrc={face1}
+      backgroundImageSrc={image3}
+      viewImageSrc={svgEye}
+      commentImageSrc={svgComment}
+      heartImageSrc={svgHeart}
+      statView={8}
+      statComment={43}
+      statLove={2}
+    />
+  </CenterHorizontalAndVertical>
 )

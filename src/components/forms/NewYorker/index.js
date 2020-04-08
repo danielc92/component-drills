@@ -2,13 +2,6 @@ import styled from "styled-components"
 
 import React from "react"
 
-const FormWrapper = styled.div`
-  background: #f7f7f7;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 const Form = styled.form`
   padding: 32px;
   background: #fff;
@@ -16,6 +9,7 @@ const Form = styled.form`
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border: 1px solid #c4c4c4;
 `
 const Input = styled.input`
   padding: 12px;
@@ -143,32 +137,30 @@ export default function index({
   passwordPlaceholder,
   buttonText,
   retainText,
-  forgotPasswordText
+  forgotPasswordText,
 }) {
   return (
-    <FormWrapper>
-      <Form>
-        <Label>{emailLabel}</Label>
-        <Input placeholder={emailPlaceholder}></Input>
-        <Label>{passwordLabel}</Label>
-        <Input placeholder={passwordPlaceholder}></Input>
-        <Between>
-          <Flex>
-            <Checkbox>
-              <span className="text">{retainText}</span>
-              <input type="checkbox" />
-              <span className="mark" />
-            </Checkbox>
-          </Flex>
+    <Form>
+      <Label>{emailLabel}</Label>
+      <Input placeholder={emailPlaceholder}></Input>
+      <Label>{passwordLabel}</Label>
+      <Input placeholder={passwordPlaceholder}></Input>
+      <Between>
+        <Flex>
+          <Checkbox>
+            <span className="text">{retainText}</span>
+            <input type="checkbox" />
+            <span className="mark" />
+          </Checkbox>
+        </Flex>
 
-          <Link>{forgotPasswordText}</Link>
-        </Between>
-        <Button>{buttonText}</Button>
-        <Divider>
-          <DividerText>or</DividerText>
-        </Divider>
-        <Button>Sign in with Google</Button>
-      </Form>
-    </FormWrapper>
+        <Link>{forgotPasswordText}</Link>
+      </Between>
+      <Button>{buttonText}</Button>
+      <Divider>
+        <DividerText>or</DividerText>
+      </Divider>
+      <Button>Sign in with Google</Button>
+    </Form>
   )
 }
