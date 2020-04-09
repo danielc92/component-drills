@@ -41,6 +41,29 @@ const ImageText = styled.div`
   padding: 4px;
 `
 
+const Title = styled.h1`
+  margin: 0 0 12px 0;
+`
+
+const AuthorWrapper = styled.div`
+  padding: 12px 0;
+  border-top: 4px solid #000;
+  border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+`
+const AuthorContent = styled.div`
+  text-align: right;
+`
+const Author = styled.p`
+  margin: 0 0 12px 0;
+`
+
+const Date = styled.p`
+  margin: 0;
+`
+
 export default function index({
   title,
   author,
@@ -51,6 +74,15 @@ export default function index({
 }) {
   return (
     <Wrapper>
+      <Title>{title}</Title>
+      <AuthorWrapper>
+        <AuthorContent>
+          <Author>
+            By <strong>{author}</strong>
+          </Author>
+          <Date>Posted {date}</Date>
+        </AuthorContent>
+      </AuthorWrapper>
       <Image imageSrc={imageSrc}>
         <ImageText>{imageText}</ImageText>
       </Image>
