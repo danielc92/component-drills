@@ -26,6 +26,7 @@ const ItemContainer = styled.div`
 
 const IconInfoWrapper = styled.div`
   display: flex;
+  margin-right: 12px;
 `
 
 const CommunityInfo = styled.div`
