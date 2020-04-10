@@ -5,8 +5,9 @@ const NavbarWrapper = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 0 32px;
   flex-wrap: wrap;
+  border-bottom: 1px solid #dcdcdc;
 `
 
 const NavbarLeft = styled.div`
@@ -21,8 +22,9 @@ const NavbarRight = styled.div`
 
 const Logo = styled.h2`
   margin: 0;
-  padding: 16px;
+  padding: 16px 0;
   font-size: 32px;
+  margin-right: 16px;
 `
 const LinksContainer = styled.div`
   display: flex;
@@ -42,14 +44,14 @@ const Link = styled.a`
 `
 const Button = styled.a`
   display: block;
-  padding: 16px;
+  padding: 12px 16px;
   cursor: pointer;
 
-  border-radius: 2px;
+  border-radius: 4px;
   font-weight: bold;
   text-transform: ${(props) => (props.primary ? "uppercase" : "")};
   color: ${(props) => (props.primary ? "white" : "black")};
-  background: ${(props) => (props.primary ? "#4D1E4D" : "transparent")};
+  background: ${(props) => (props.primary ? "#611f69" : "transparent")};
 `
 
 export default function index({ signInButton, links, getStartedButton }) {
