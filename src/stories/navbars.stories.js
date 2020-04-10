@@ -1,8 +1,10 @@
 import React from "react"
 import Basic from "../components/navbars/Basic"
 import Centered from "../components/navbars/Centered"
+import Slack from "../components/navbars/Slack"
+
 export default {
-  title: "Navbars"
+  title: "Navbars",
 }
 
 export const BasicDarkNavbar = () => (
@@ -18,3 +20,17 @@ export const BasicRedNavbar = () => (
 )
 
 export const BasicCentered = () => <Centered />
+
+export const SlackNavbar = () => (
+  <Slack
+    links={[
+      { text: "Why flack?", url: "#" },
+      { text: "Enterprise", url: "#" },
+      { text: "Solutions", url: "#" },
+      { text: "Pricing", url: "#" },
+      { text: "Resources", url: "#" },
+    ]}
+    getStartedButton="get started"
+    signInButton="Sign In"
+  />
+)
