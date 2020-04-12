@@ -1,6 +1,7 @@
 import React from "react"
 import Whatsapp from "../components/footers/Whatsapp"
 import Seek from "../components/footers/Seek"
+import Webflow from "../components/footers/Webflow"
 
 export default {
   title: "Footers",
@@ -18,7 +19,7 @@ const dummyColumns = [
     ],
   },
   {
-    title: "Lorem",
+    title: "Ipsum",
     links: [
       { text: "Dolore", url: "#" },
       { text: "Lorem anim ", url: "#", tag: "new" },
@@ -29,7 +30,7 @@ const dummyColumns = [
     ],
   },
   {
-    title: "Lorem",
+    title: "Laborum",
     links: [
       { text: "Dolore", url: "#" },
       { text: "Lorem anim ", url: "#" },
@@ -43,7 +44,7 @@ const dummyColumns = [
     ],
   },
   {
-    title: "Lorem",
+    title: "Dolrusim",
     links: [
       { text: "Dolore", url: "#" },
       { text: "Ipsum", url: "#" },
@@ -54,3 +55,4 @@ const dummyColumns = [
 
 export const SeekerFooter = () => <Seek columns={dummyColumns}></Seek>
 export const WhatsappFooter = () => <Whatsapp columns={dummyColumns}></Whatsapp>
+export const WebflowFooter = () => <Webflow columns={dummyColumns} />
