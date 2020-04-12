@@ -2,6 +2,7 @@ import React from "react"
 import Basic from "../components/cards/Basic"
 import Dev from "../components/cards/DevToCard"
 import DevBlog from "../components/cards/DevToBlogCard"
+import Webflow from "../components/cards/WebflowBlog"
 import Slack from "../components/cards/SlackCards"
 import faker from "faker"
 import Bona from "../components/cards/Bona"
@@ -89,3 +90,40 @@ export const BonaCard = () => (
     />
   </CenterHorizontalAndVertical>
 )
+
+const webflowCards = [
+  {
+    image: image1,
+    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    text:
+      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
+    timestamp: "March 20, 2020",
+    overlayColour: "blue",
+  },
+  {
+    image: image2,
+    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    text:
+      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
+    timestamp: "March 20, 2020",
+    overlayColour: "purple",
+  },
+  {
+    image: image2,
+    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    text:
+      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
+    timestamp: "March 20, 2020",
+    overlayColour: "red",
+  },
+  {
+    image: image3,
+    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    text:
+      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
+    timestamp: "March 20, 2020",
+    overlayColour: "yellow",
+  },
+]
+
+export const WebflowBlogCards = () => <Webflow cards={webflowCards} />
