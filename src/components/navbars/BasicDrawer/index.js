@@ -58,6 +58,17 @@ const Drawer = styled.div`
     props.open ? "translateX(0px)" : "translateX(100%)"};
 `
 
+const Overlay = styled.div`
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: ${(props) => (props.open ? "block" : "none")};
+`
+
 const Menu = styled.img`
   width: 22px;
   height: 22px;
@@ -89,6 +100,8 @@ export default function index({
         ))}
       </NavigationItems>
       <Menu src={menuIcon} onClick={toggleDrawer} />
+
+      <Overlay open={drawerOpen}></Overlay>
       <Drawer open={drawerOpen}>
         {links.map((l) => (
           <NavigationItem href={l.url}>{l.text}</NavigationItem>
