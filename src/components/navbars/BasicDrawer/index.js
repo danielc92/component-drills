@@ -101,7 +101,7 @@ export default function index({
       </NavigationItems>
       <Menu src={menuIcon} onClick={toggleDrawer} />
 
-      <Overlay open={drawerOpen}></Overlay>
+      <Overlay open={drawerOpen} onClick={toggleDrawer}></Overlay>
       <Drawer open={drawerOpen}>
         {links.map((l) => (
           <NavigationItem href={l.url}>{l.text}</NavigationItem>
