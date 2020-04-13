@@ -7,7 +7,8 @@ const TagGroup = styled.div`
 `
 
 const Tag = styled.div`
-  background: #f3f3f3;
+  color: ${(props) => (props.color ? props.color : "#000")};
+  background: ${(props) => (props.background ? props.background : "#cecece")};
   padding: 4px 12px;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -18,7 +19,9 @@ export default function index({ tags, rounded }) {
   return (
     <TagGroup>
       {tags.map((t) => (
-        <Tag rounded={rounded}>{t.text}</Tag>
+        <Tag color={t.color} background={t.background} rounded={rounded}>
+          {t.text}
+        </Tag>
       ))}
     </TagGroup>
   )

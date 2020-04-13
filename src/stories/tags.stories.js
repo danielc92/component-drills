@@ -33,6 +33,35 @@ const tags = [
     src: face5,
   },
 ]
-export const BasicTags = () => <Basic tags={tags} />
-export const BasicTagsRounded = () => <Basic rounded tags={tags} />
+
+const tags2 = [
+  {
+    text: "lorem",
+    color: "#fff",
+    background: "#459352",
+  },
+  {
+    text: "dalore",
+    color: "#fff",
+    background: "#3086cc",
+  },
+  {
+    text: "ipsum",
+    color: "#fff",
+    background: "#a01313",
+  },
+  {
+    text: "relium",
+    color: "#fff",
+    background: "#54534f",
+  },
+  {
+    text: "selipsum",
+    color: "#fff",
+    background: "#a01313",
+  },
+]
+export const Tags = () => <Basic tags={tags} />
+export const TagsWithCustomColour = () => <Basic tags={tags2} />
+export const TagsRounded = () => <Basic rounded tags={tags} />
 export const ImageTags = () => <Image tags={tags} />
