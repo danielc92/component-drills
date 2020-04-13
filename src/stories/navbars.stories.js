@@ -3,6 +3,7 @@ import Basic from "../components/navbars/Basic"
 import BasicHamburger from "../components/navbars/BasicHamburger"
 import Centered from "../components/navbars/Centered"
 import Slack from "../components/navbars/Slack"
+import Drawer from "../components/navbars/BasicDrawer"
 import menuIcon from "./svg/menu.svg"
 export default {
   title: "Navbars",
@@ -38,6 +39,18 @@ export const BasicRedNavbar = () => (
 
 export const BasicCentered = () => <Centered />
 
+export const BasicDrawer = () => (
+  <Drawer
+    menuIcon={menuIcon}
+    links={[
+      { url: "#", text: "Home" },
+      { url: "#", text: "Resources" },
+      { url: "#", text: "Contact" },
+      { url: "#", text: "About" },
+      { url: "#", text: "News" },
+    ]}
+  />
+)
 export const SlackNavbar = () => (
   <Slack
     links={[
