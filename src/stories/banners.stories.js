@@ -18,35 +18,36 @@ export default {
   // component: Basic
 }
 
+export const BasicBannerWithBlueBackground = () => (
+  <Basic
+    header="Aute laboris et"
+    subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
+    background="#2784e8"
+  />
+)
+
+export const BasicBannerWithBlueBackgroundAndButton = () => (
+  <Basic
+    header="Aute laboris et"
+    subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
+    background="#2784e8"
+    ctaButtonText="Learn more"
+    ctaButtonHref="#"
+  />
+)
+
 export const BasicBannerWithRedBackground = () => (
   <Basic
-    header="Large Header"
-    subHeader="Welcome to the page"
+    header="Aute laboris et"
+    subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
     background="#d14b4b"
   />
 )
-
-export const BasicBannerWithBlueBackground = () => (
-  <Basic
-    header="Large Header"
-    subHeader="Welcome to the page"
-    background="#3c60ad"
-  />
-)
-
-export const BasicBannerWithOrangeBackground = () => (
-  <Basic
-    header="Large Header"
-    subHeader="Welcome to the page"
-    background="#d88b17"
-  />
-)
-
 export const BasicBannerWithBackgroundImage = () => (
   <ImageBanner
-    header="Consequat dolor enim"
-    subHeader="Aliquip ut minim aliqua magna aliqua ex voluptate."
-    imageSrc={image3}
+    header="Aute laboris et"
+    subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
+    imageSrc={image1}
   />
 )
 

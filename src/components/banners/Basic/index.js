@@ -9,19 +9,40 @@ const Banner = styled.div`
 `
 
 const Header = styled.h1`
-  font-size: 56px;
-  margin-bottom: 24px;
+  font-size: 48px;
+  margin: 0 0 16px 0;
 `
 
 const SubHeader = styled.p`
-  font-size: 18px;
-  margin-bottom: 24px;
+  font-size: 16px;
+  margin: 0 0 16px 0;
 `
-export default function index({ header, subHeader, background }) {
+
+const Button = styled.a`
+  display: inline-block;
+  background: ${(props) => props.background};
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0;
+`
+export default function index({
+  header,
+  subHeader,
+  background,
+  ctaButtonHref,
+  ctaButtonText,
+}) {
   return (
     <Banner background={background}>
       <Header>{header}</Header>
       <SubHeader>{subHeader}</SubHeader>
+      {ctaButtonText ? (
+        <Button background={background} href={ctaButtonHref}>
+          {ctaButtonText}
+        </Button>
+      ) : null}
     </Banner>
   )
 }
