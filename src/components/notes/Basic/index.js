@@ -36,9 +36,16 @@ const NoteText = styled.p`
   font-size: 14px;
   line-height: 1.5;
 `
-export default function index({ title, text, type, rounded, borderStyle }) {
+export default function index({
+  centered,
+  title,
+  text,
+  type,
+  rounded,
+  borderStyle,
+}) {
   return (
-    <Note type={type} rounded={rounded} borderStyle={borderStyle}>
+    <Note centered type={type} rounded={rounded} borderStyle={borderStyle}>
       <NoteHeader>{title}</NoteHeader>
       <NoteText>{text}</NoteText>
     </Note>
