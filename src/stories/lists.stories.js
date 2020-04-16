@@ -1,6 +1,7 @@
 import React from "react"
 import "../App.css"
 import faker from "faker"
+import Techcrunch from "../components/lists/TechcrunchList"
 import VideoList from "../components/lists/VideoList"
 import RedditTrending from "../components/lists/RedditTrendingList"
 import FacebookFriends from "../components/lists/FacebookFriendList"
@@ -14,6 +15,7 @@ import icon2 from "./images/diamond.png"
 import icon3 from "./images/database-2.png"
 import icon4 from "./images/compose.png"
 import icon5 from "./images/internet.png"
+import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 
 import { CenterHorizontalAndVertical } from "./layout"
 export default {
@@ -88,7 +90,20 @@ const friends = [
     mutualText: "5 Mutual friends.",
   },
 ]
+
 export const FacebookFriendList = () => <FacebookFriends friends={friends} />
+
+const articles = new Array(6).fill({
+  title: "Aute occaecat aliqua non ut occaecat laborum cupidatat exercitation.",
+  date: "3:30 pm AEST • April 16, 2020",
+  author: "Steve O Hear",
+  summary:
+    "Reprehenderit culpa. Exercitation dolore est ipsum laborum ullamco irure anim velit excepteur aute ut voluptate nisi ad...",
+  image: image1,
+})
+
+export const TechCrunchList = () => <Techcrunch articles={articles} />
+
 export const RedditTrendingCommunities = () => (
   <CenterHorizontalAndVertical>
     {" "}
