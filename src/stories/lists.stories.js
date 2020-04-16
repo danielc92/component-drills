@@ -93,7 +93,7 @@ const friends = [
 
 export const FacebookFriendList = () => <FacebookFriends friends={friends} />
 
-const articles = new Array(6).fill({
+const articles = new Array(3).fill({
   title: "Aute occaecat aliqua non ut occaecat laborum cupidatat exercitation.",
   date: "3:30 pm AEST • April 16, 2020",
   author: "Steve O Hear",
@@ -102,7 +102,11 @@ const articles = new Array(6).fill({
   image: image1,
 })
 
-export const TechCrunchList = () => <Techcrunch articles={articles} />
+export const TechCrunchList = () => (
+  <CenterHorizontalAndVertical>
+    <Techcrunch articles={articles} />
+  </CenterHorizontalAndVertical>
+)
 
 export const RedditTrendingCommunities = () => (
   <CenterHorizontalAndVertical>

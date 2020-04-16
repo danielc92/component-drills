@@ -10,7 +10,7 @@ const Article = styled.section`
   padding: 16px 0;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  border-top: 2px solid #dcdcdc;
+  border-top: 2px solid #f8f8f8;
 `
 
 const Column = styled.div``
