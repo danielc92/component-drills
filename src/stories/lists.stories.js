@@ -5,16 +5,20 @@ import Techcrunch from "../components/lists/TechcrunchList"
 import VideoList from "../components/lists/VideoList"
 import RedditTrending from "../components/lists/RedditTrendingList"
 import FacebookFriends from "../components/lists/FacebookFriendList"
-import face1 from "./images/face-1.png"
-import face2 from "./images/face-2.png"
-import face3 from "./images/face-3.png"
-import face4 from "./images/face-4.png"
-import face5 from "./images/face-5.png"
-import icon1 from "./images/compass.png"
-import icon2 from "./images/diamond.png"
-import icon3 from "./images/database-2.png"
-import icon4 from "./images/compose.png"
-import icon5 from "./images/internet.png"
+import face1 from "./images/humans/face-1.png"
+import face2 from "./images/humans/face-2.png"
+import face3 from "./images/humans/face-3.png"
+import face4 from "./images/humans/face-4.png"
+import face5 from "./images/humans/face-5.png"
+import icon1 from "./images/icons/compass.png"
+import icon2 from "./images/icons/diamond.png"
+import icon3 from "./images/icons/database-2.png"
+import icon4 from "./images/icons/compose.png"
+import icon5 from "./images/icons/internet.png"
+import animal1 from "./images/animals/boris-smokrovic-DPXytK8Z59Y-unsplash.jpg"
+import animal2 from "./images/animals/david-clode-0lwa8Dprrzs-unsplash.jpg"
+import animal3 from "./images/animals/gary-bendig-6GMq7AGxNbE-unsplash.jpg"
+import animal4 from "./images/animals/pietro-jeng-0Sd2qqU5soQ-unsplash.jpg"
 import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 
 import { CenterHorizontalAndVertical } from "./layout"
@@ -24,27 +28,27 @@ export default {
 
 const data = [
   {
-    title: "Corona Virus Outbreak",
+    title: "Aliqua sunt quis nulla",
     studio: "Channel 8",
-    imageSrc: "https://picsum.photos/id/237/600/450",
+    imageSrc: animal1,
     time: "12:32",
   },
   {
-    title: "Corona Virus Outbreak",
+    title: "Deserunt ipsum ex magna dolor labore dolore ad do.",
     studio: "Channel 8",
-    imageSrc: "https://picsum.photos/id/233/600/450",
+    imageSrc: animal2,
     time: "12:32",
   },
   {
-    title: "Corona Virus Outbreak",
+    title: "Fugiat occaecat ut eiusmodnim exercitation.",
     studio: "Channel 8",
-    imageSrc: "https://picsum.photos/id/232/600/450",
+    imageSrc: animal3,
     time: "12:32",
   },
   {
-    title: "Corona Virus Outbreak",
+    title: "Esse enim enim quis prehenderit ",
     studio: "Channel 8",
-    imageSrc: "https://picsum.photos/id/231/600/450",
+    imageSrc: animal4,
     time: "12:32",
   },
 ]
@@ -93,14 +97,35 @@ const friends = [
 
 export const FacebookFriendList = () => <FacebookFriends friends={friends} />
 
-const articles = new Array(3).fill({
-  title: "Aute occaecat aliqua non ut occaecat laborum cupidatat exercitation.",
-  date: "3:30 pm AEST • April 16, 2020",
-  author: "Steve O Hear",
-  summary:
-    "Reprehenderit culpa. Exercitation dolore est ipsum laborum ullamco irure anim velit excepteur aute ut voluptate nisi ad...",
-  image: image1,
-})
+const articles = [
+  {
+    title:
+      "Aute occaecat aliqua non ut occaecat laborum cupidatat exercitation.",
+    date: "3:30 pm AEST • April 16, 2020",
+    author: "Steve O Hear",
+    summary:
+      "Reprehenderit culpa. Exercitation dolore est ipsum laborum ullamco irure anim velit excepteur aute ut voluptate nisi ad...",
+    image: animal2,
+  },
+  {
+    title:
+      "Aute occaecat aliqua non ut occaecat laborum cupidatat exercitation.",
+    date: "3:30 pm AEST • April 16, 2020",
+    author: "Steve O Hear",
+    summary:
+      "Reprehenderit culpa. Exercitation dolore est ipsum laborum ullamco irure anim velit excepteur aute ut voluptate nisi ad...",
+    image: animal1,
+  },
+  {
+    title:
+      "Aute occaecat aliqua non ut occaecat laborum cupidatat exercitation.",
+    date: "3:30 pm AEST • April 16, 2020",
+    author: "Steve O Hear",
+    summary:
+      "Reprehenderit culpa. Exercitation dolore est ipsum laborum ullamco irure anim velit excepteur aute ut voluptate nisi ad...",
+    image: animal3,
+  },
+]
 
 export const TechCrunchList = () => (
   <CenterHorizontalAndVertical>

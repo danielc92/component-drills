@@ -1,11 +1,11 @@
 import React from "react"
 import Image from "../components/tags/Image"
 import Basic from "../components/tags/Basic"
-import face1 from "./images/face-1.png"
-import face2 from "./images/face-2.png"
-import face3 from "./images/face-3.png"
-import face4 from "./images/face-4.png"
-import face5 from "./images/face-5.png"
+import face1 from "./images/humans/face-1.png"
+import face2 from "./images/humans/face-2.png"
+import face3 from "./images/humans/face-3.png"
+import face4 from "./images/humans/face-4.png"
+import face5 from "./images/humans/face-5.png"
 
 export default {
   title: "Tags",
