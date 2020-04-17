@@ -4,6 +4,7 @@ import Dev from "../components/cards/DevToCard"
 import DevBlog from "../components/cards/DevToBlogCard"
 import Webflow from "../components/cards/WebflowBlog"
 import Slack from "../components/cards/SlackCards"
+import Highlighted from "../components/cards/Highlighted"
 import faker from "faker"
 import Bona from "../components/cards/Bona"
 import image1 from "./images/harley-davidson-eeTJKC_wz34-unsplash.jpg"
@@ -127,3 +128,78 @@ const webflowCards = [
 ]
 
 export const WebflowBlogCards = () => <Webflow cards={webflowCards} />
+
+const highlightedCards = [
+  {
+    color: "#2436bf",
+    title: "Post One",
+    image: image3,
+    text:
+      "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
+    timestamp: "5 days ago",
+    footerItems: [
+      {
+        text: "5 mill",
+        subText: "read",
+      },
+      {
+        text: "6354",
+        subText: "views",
+      },
+      {
+        text: "54",
+        subText: "comments",
+      },
+    ],
+  },
+  {
+    color: "#E10661",
+    title: "Post One",
+    image: image1,
+    text:
+      "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
+    timestamp: "5 days ago",
+    footerItems: [
+      {
+        text: "5 mill",
+        subText: "read",
+      },
+      {
+        text: "6354",
+        subText: "views",
+      },
+      {
+        text: "54",
+        subText: "comments",
+      },
+    ],
+  },
+  {
+    color: "#1cce31",
+    title: "Post One",
+    image: image2,
+    text:
+      "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
+    timestamp: "5 days ago",
+    footerItems: [
+      {
+        text: "5 mill",
+        subText: "read",
+      },
+      {
+        text: "6354",
+        subText: "views",
+      },
+      {
+        text: "54",
+        subText: "comments",
+      },
+    ],
+  },
+]
+
+export const HighlightedCards = () => (
+  <CenterHorizontalAndVertical>
+    <Highlighted cards={highlightedCards} />
+  </CenterHorizontalAndVertical>
+)
