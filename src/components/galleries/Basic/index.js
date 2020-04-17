@@ -22,26 +22,31 @@ const Image = styled.img`
   object-fit: cover;
   transform: ${(props) => (props.zoomed ? "scale(1.3)" : "scale(1.0)")};
   transition: all 0.25s ease;
+  filter: ${(props) => (props.grayscale ? "grayscale()" : "")};
 `
 const Controls = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
 `
 
 const Counter = styled.p`
   color: white;
   margin: 0;
-  padding: 16px;
+
   font-size: 12px;
 `
 const Button = styled.button`
-  padding: 16px;
+  padding: 8px;
   color: white;
   background: none;
   border: none;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 1.6px;
+  border: 1px solid #fff;
 `
 
 const ImageContainer = styled.div`
@@ -55,8 +60,8 @@ const ArrowLeft = styled.button`
   padding: 32px 16px;
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
-  background: rgba(0, 0, 0, 0.5);
-  top: 180px;
+  background: rgba(0, 0, 0, 0.3);
+  top: 35%;
   left: 0;
   color: white;
   font-size: 24px;
@@ -69,8 +74,8 @@ const ArrowRight = styled.button`
   padding: 32px 16px;
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
-  background: rgba(0, 0, 0, 0.5);
-  top: 180px;
+  background: rgba(0, 0, 0, 0.3);
+  top: 35%;
   right: 0;
   color: white;
   font-size: 24px;
@@ -82,6 +87,8 @@ export default function index({ images }) {
   const [current, setcurrent] = useState(0)
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [zoomed, setZoomed] = useState(false)
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [grayscale, setGray] = useState(false)
   const nextImage = () => {
     if (current === images.length - 1) {
       setcurrent(0)
@@ -98,6 +105,7 @@ export default function index({ images }) {
   }
 
   const toggleZoomedState = () => setZoomed(!zoomed)
+  const toggleGrayscaleState = () => setGray(!grayscale)
 
   return (
     <Gallery>
@@ -106,12 +114,18 @@ export default function index({ images }) {
           <Counter>
             {current + 1} / {images.length}
           </Counter>
-          <Button onClick={toggleZoomedState}>
-            {zoomed ? "Zoom out" : "Zoom in"}
-          </Button>
+          <div>
+            <Button onClick={toggleZoomedState}>Toggle Zoom</Button>
+            <Button onClick={toggleGrayscaleState}>Toggle Grayscale</Button>
+          </div>
         </Controls>
-        <ImageContainer onClick={toggleZoomedState}>
-          <Image zoomed={zoomed} src={images[current]} />
+        <ImageContainer>
+          <Image
+            onClick={toggleZoomedState}
+            zoomed={zoomed}
+            grayscale={grayscale}
+            src={images[current]}
+          />
           <ArrowLeft onClick={previousImage}>{"<"}</ArrowLeft>
           <ArrowRight onClick={nextImage}>{">"}</ArrowRight>
         </ImageContainer>
