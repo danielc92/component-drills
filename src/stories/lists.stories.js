@@ -19,7 +19,6 @@ import animal1 from "./images/animals/boris-smokrovic-DPXytK8Z59Y-unsplash.jpg"
 import animal2 from "./images/animals/david-clode-0lwa8Dprrzs-unsplash.jpg"
 import animal3 from "./images/animals/gary-bendig-6GMq7AGxNbE-unsplash.jpg"
 import animal4 from "./images/animals/pietro-jeng-0Sd2qqU5soQ-unsplash.jpg"
-import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
 
 import { CenterHorizontalAndVertical } from "./layout"
 export default {
@@ -54,7 +53,11 @@ const data = [
 ]
 
 export const YoutubeVideoList = () => {
-  return data.map((item) => <VideoList {...item} />)
+  return (
+    <CenterHorizontalAndVertical>
+      <VideoList data={data} />
+    </CenterHorizontalAndVertical>
+  )
 }
 
 const friends = [

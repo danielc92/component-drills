@@ -1,16 +1,16 @@
 import styled from "styled-components"
 import React from "react"
 
-const Layout = styled.div`
+const VideoItem = styled.div`
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 `
 
 const VideoThumbnail = styled.div`
-  background-image: url(${props => props.imageSrc});
+  background-image: url(${(props) => props.imageSrc});
   background-size: cover;
-  width: 140px;
-  height: 90px;
+  width: 180px;
+  height: 110px;
   position: relative;
 `
 
@@ -48,21 +48,27 @@ const Tag = styled.p`
   border-radius: 2px;
   display: inline-block;
   font-weight: bold;
-  color: ;
+`
+const Container = styled.section`
+  max-width: 800px;
 `
 
-export default function index({ imageSrc, time, title, studio }) {
+export default function index({ data }) {
   return (
-    <Layout>
-      <VideoThumbnail imageSrc={imageSrc}>
-        <VideoTime>{time}</VideoTime>
-      </VideoThumbnail>
-      <Content>
-        <Title>{title}</Title>
-        <Text>{studio}</Text>
-        <Text>Recommended for you</Text>
-        <Tag>New</Tag>
-      </Content>
-    </Layout>
+    <Container>
+      {data.map((d) => (
+        <VideoItem>
+          <VideoThumbnail imageSrc={d.imageSrc}>
+            <VideoTime>{d.time}</VideoTime>
+          </VideoThumbnail>
+          <Content>
+            <Title>{d.title}</Title>
+            <Text>{d.studio}</Text>
+            <Text>Recommended for you</Text>
+            <Tag>New</Tag>
+          </Content>
+        </VideoItem>
+      ))}
+    </Container>
   )
 }
