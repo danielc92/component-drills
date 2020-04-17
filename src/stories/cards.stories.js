@@ -10,6 +10,7 @@ import Bona from "../components/cards/Bona"
 import image1 from "./images/harley-davidson-eeTJKC_wz34-unsplash.jpg"
 import image2 from "./images/jason-leung-DC5zm4FeBoI-unsplash.jpg"
 import image3 from "./images/taylor-simpson-2SX1LEMppsA-unsplash.jpg"
+import image4 from "./images/andrea-cau-nV7GJmSq3zc-unsplash.jpg"
 import face1 from "./images/face-5.png"
 import svgComment from "./svg/comment.svg"
 import svgEye from "./svg/eye.svg"
@@ -133,7 +134,7 @@ const highlightedCards = [
   {
     color: "#2436bf",
     title: "Post One",
-    image: image3,
+    image: image4,
     text:
       "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
     timestamp: "5 days ago",
