@@ -47,6 +47,7 @@ const Button = styled.button`
   font-size: 11px;
   letter-spacing: 1.6px;
   border: 1px solid #fff;
+  margin-left: 8px;
 `
 
 const ImageContainer = styled.div`
