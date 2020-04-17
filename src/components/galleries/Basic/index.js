@@ -47,30 +47,35 @@ const Button = styled.button`
 const ImageContainer = styled.div`
   position: relative;
   overflow: hidden;
+  cursor: zoom-in;
 `
-const ArrowLeft = styled.div`
+const ArrowLeft = styled.button`
+  border: none;
   position: absolute;
   padding: 32px 16px;
   border-bottom-right-radius: 6px;
   border-top-right-radius: 6px;
   background: rgba(0, 0, 0, 0.5);
-  top: 200px;
+  top: 180px;
   left: 0;
   color: white;
   font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
 `
-const ArrowRight = styled.div`
+const ArrowRight = styled.button`
+  border: none;
   position: absolute;
   padding: 32px 16px;
   border-bottom-left-radius: 6px;
   border-top-left-radius: 6px;
   background: rgba(0, 0, 0, 0.5);
-  top: 200px;
+  top: 180px;
   right: 0;
   color: white;
   font-size: 24px;
   font-weight: bold;
+  cursor: pointer;
 `
 export default function index({ images }) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -105,7 +110,7 @@ export default function index({ images }) {
             {zoomed ? "Zoom out" : "Zoom in"}
           </Button>
         </Controls>
-        <ImageContainer>
+        <ImageContainer onClick={toggleZoomedState}>
           <Image zoomed={zoomed} src={images[current]} />
           <ArrowLeft onClick={previousImage}>{"<"}</ArrowLeft>
           <ArrowRight onClick={nextImage}>{">"}</ArrowRight>
