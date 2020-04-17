@@ -4,7 +4,7 @@ import styled from "styled-components"
 const Grid = styled.div`
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
 `
 const Card = styled.div`
   border-radius: 8px;
@@ -12,7 +12,7 @@ const Card = styled.div`
 `
 
 const CardImage = styled.img`
-  max-height: 175px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
@@ -62,6 +62,7 @@ const FooterItemText = styled.p`
   margin: 0 0 2px 0;
   font-size: 18px;
   font-weight: bold;
+  white-space: nowrap;
 `
 
 const FooterItemSubtext = styled.p`
