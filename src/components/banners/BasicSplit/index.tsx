@@ -62,8 +62,19 @@ const Button = styled.a`
     color: white;
   }
 `
+interface IProps {
+  title: string
+  subTitle: string
+  buttonText: string
+  imageSrc: string
+}
 
-export default function index({ title, subTitle, buttonText, imageSrc }) {
+export default function index({
+  title,
+  subTitle,
+  buttonText,
+  imageSrc,
+}: IProps) {
   return (
     <Wrapper>
       <Content>
