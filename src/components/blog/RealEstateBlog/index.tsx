@@ -49,8 +49,17 @@ const ImageNode = styled.img`
   height: auto;
   margin: 0;
 `
+interface IProps {
+  title: string
+  author: string
+  date: string
+  content: {
+    node: "paragraph" | "image" | "quote"
+    value: string
+  }[]
+}
 
-export default function index({ title, author, date, content }) {
+export default function index({ title, author, date, content }: IProps) {
   return (
     <Wrapper>
       <Title>{title}</Title>
@@ -58,7 +67,7 @@ export default function index({ title, author, date, content }) {
         <Author>{author}</Author>
         <Date>{date}</Date>
       </AuthorBox>
-      {content.map(i => {
+      {content.map((i) => {
         if (i.node === "paragraph") {
           return <ParagraphNode>{i.value}</ParagraphNode>
         }

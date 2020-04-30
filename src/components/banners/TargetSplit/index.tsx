@@ -47,7 +47,13 @@ const Link = styled.a`
   padding-bottom: 4px;
   border-bottom: 1px solid white;
 `
-export default function index({ imageSrc, title, links }) {
+
+interface IProps {
+  imageSrc: string
+  title: string
+  links: { url: string; text: string }[]
+}
+export default function index({ imageSrc, title, links }: IProps) {
   return (
     <Wrapper>
       <TextSection>

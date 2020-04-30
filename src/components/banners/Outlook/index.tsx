@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Wrapper = styled.section`
+const Wrapper = styled.section<{ imageSrc: string }>`
   display: flex;
   background: blue;
   align-items: flex-end;
@@ -16,7 +16,7 @@ const Content = styled.div`
   padding: 0 0 80px 80px;
 `
 
-const BigText = styled.h1`
+const BigText = styled.h1<{ delay: string }>`
   margin: 0;
   font-size: 100px;
   animation-timing-function: ease-in;
@@ -36,12 +36,18 @@ const BigText = styled.h1`
   }
 `
 
+interface IProps {
+  ctaLevel1: string
+  ctaLevel2: string
+  ctaLevel3: string
+  backgroundImageSrc: string
+}
 export default function index({
   ctaLevel1,
   ctaLevel2,
   ctaLevel3,
   backgroundImageSrc,
-}) {
+}: IProps) {
   return (
     <Wrapper imageSrc={backgroundImageSrc}>
       <Content>

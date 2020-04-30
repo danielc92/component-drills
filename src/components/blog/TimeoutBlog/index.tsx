@@ -22,7 +22,7 @@ const ParagraphNode = styled.p`
 
 const HeadingNode = styled.h3``
 
-const Image = styled.div`
+const Image = styled.div<{ imageSrc: string }>`
   position: relative;
   background-image: url(${(props) => props.imageSrc});
   height: 450px;
@@ -63,7 +63,17 @@ const Author = styled.p`
 const Date = styled.p`
   margin: 0;
 `
-
+interface IProps {
+  title: string
+  author: string
+  date: string
+  content: Array<{
+    node: string
+    value: string
+  }>
+  imageText: string
+  imageSrc: string
+}
 export default function index({
   title,
   author,
@@ -71,7 +81,7 @@ export default function index({
   content,
   imageText,
   imageSrc,
-}) {
+}: IProps) {
   return (
     <Wrapper>
       <Title>{title}</Title>
