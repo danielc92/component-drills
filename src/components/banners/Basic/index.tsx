@@ -41,7 +41,7 @@ export default function index({
   background,
   ctaButtonHref,
   ctaButtonText,
-}:IProps) {
+}: IProps) {
   return (
     <Banner background={background}>
       <Header>{header}</Header>

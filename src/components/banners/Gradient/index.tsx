@@ -26,7 +26,7 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, F
 `,
 }
 
-const Banner = styled.div`
+const Banner = styled.div<{ gradient: string }>`
   ${(props) => props.gradient}
   color: white;
   text-align: center;
@@ -42,9 +42,16 @@ const SubHeader = styled.p`
   font-size: 18px;
   margin-bottom: 24px;
 `
-export default function index({ header, subHeader, background, type }) {
+
+interface IProps {
+  header: string
+  subHeader: string
+  background: string
+  type: string
+}
+export default function index({ header, subHeader, background, type }: IProps) {
   return (
-    <Banner background={background} gradient={gradients[type]}>
+    <Banner gradient={gradients[type]}>
       <Header>{header}</Header>
       <SubHeader>{subHeader}</SubHeader>
     </Banner>
