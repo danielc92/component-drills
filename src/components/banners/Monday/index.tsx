@@ -25,6 +25,7 @@ const Button = styled.a`
   padding: 16px 40px;
   background-color: #d90364;
   color: #fff;
+  cursor: pointer;
 `
 
 const ButtonText = styled.span``
@@ -33,16 +34,26 @@ const ButtonIconWrapper = styled.span`
   margin-left: 16px;
 `
 
-const Span = styled.span`
+const Span = styled.span<{ highlight: boolean }>`
   color: ${(props) => (props.highlight ? "#00CA72" : "#000")};
 `
-
-export default function index({ title, subTitle, buttonText, buttonLink }) {
+interface IProps {
+  title: string
+  subTitle: string
+  buttonText: string
+  buttonLink: string
+}
+export default function index({
+  title,
+  subTitle,
+  buttonText,
+  buttonLink,
+}: IProps) {
   return (
     <Section>
       <Container>
         <CtaHeader>
-          {title.split(" ").map((i, index) => {
+          {title.split(" ").map((i: string, index: number) => {
             if (index === 0) {
               return <Span highlight>{i}&nbsp;</Span>
             }
@@ -50,8 +61,8 @@ export default function index({ title, subTitle, buttonText, buttonLink }) {
           })}
         </CtaHeader>
         <CtaSubHeader>{subTitle}</CtaSubHeader>
-        <Button>
-          <ButtonText href={buttonLink}>{buttonText}</ButtonText>
+        <Button href={buttonLink}>
+          <ButtonText>{buttonText}</ButtonText>
           <ButtonIconWrapper>
             <svg
               fill="#fff"
