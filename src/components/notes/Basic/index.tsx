@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-const Note = styled.div`
+const Note = styled.div<{
+  type: string
+  borderStyle: string
+  rounded: boolean
+}>`
   padding: 24px;
   max-width: 768px;
   background: ${(props) =>
@@ -36,6 +40,7 @@ const NoteText = styled.p`
   font-size: 14px;
   line-height: 1.5;
 `
+
 export default function index({
   centered,
   title,

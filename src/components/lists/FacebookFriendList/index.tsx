@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import faker from "faker"
 
 const Wrapper = styled.div`
   border-radius: 2px;
@@ -50,7 +49,7 @@ const Description = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
 `
-const Button = styled.a`
+const Button = styled.a<{secondary: boolean}>`
   border: 1px solid black;
   background: ${props => (props.secondary ? "#EBEDF0" : "#365899")};
   color: ${props => (props.secondary ? "#5b5b5b" : "#fff")};
@@ -67,7 +66,15 @@ const Content = styled.div`
   padding: 16px;
 `
 
-export default function index({ friends }) {
+interface IFriend {
+  buttonText: string
+    buttonText2:string
+    name:string
+    src:string
+     mutualText: string
+}
+
+export default function index({ friends }:{friends: IFriend[]}) {
   return (
     <Wrapper>
       <Header>People You May Know</Header>
@@ -82,7 +89,7 @@ export default function index({ friends }) {
               </Description>
             </Info>
             <ButtonGroup>
-              <Button>{i.buttonText}</Button>
+              <Button secondary={false}>{i.buttonText}</Button>
               <Button secondary>{i.buttonText2}</Button>
             </ButtonGroup>
           </FriendItem>
