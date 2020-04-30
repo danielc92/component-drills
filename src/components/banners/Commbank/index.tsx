@@ -6,7 +6,7 @@ const Section = styled.section`
   background: #f2f2f2;
 `
 
-const Container = styled.div`
+const Container = styled.div<{backgroundImage: string}>`
   max-width: 1200px;
   margin: 0 auto;
   background: red;
@@ -67,12 +67,15 @@ const Button = styled.a`
   display: inline-block;
 `
 
+interface IProps {
+  image:string, ctaHeader:string, ctaSubHeader:string, ctaButtonText:string
+}
 export default function index({
   image,
   ctaHeader,
   ctaSubHeader,
   ctaButtonText,
-}) {
+}: IProps) {
   return (
     <Section>
       <Container backgroundImage={image}>
