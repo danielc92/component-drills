@@ -19,7 +19,10 @@ const Button = styled.a`
     box-shadow: 4px 4px #cfd7ff;
   }
 `
-
-export default function index({ buttonText, buttonHref }) {
+interface IProps {
+  buttonText: string
+  buttonHref: string
+}
+export default function index({ buttonText, buttonHref }: IProps) {
   return <Button href={buttonHref}>{buttonText}</Button>
 }
