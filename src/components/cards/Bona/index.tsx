@@ -67,6 +67,17 @@ const FooterIcon = styled.img`
   }
 `
 
+interface IProps {
+  title: string
+  authorImageSrc: string
+  backgroundImageSrc: string
+  viewImageSrc: string
+  commentImageSrc: string
+  heartImageSrc: string
+  statLove: string
+  statComment: string
+  statView: string
+}
 export default function index({
   title,
   authorImageSrc,
@@ -77,7 +88,7 @@ export default function index({
   statLove,
   statComment,
   statView,
-}) {
+}: IProps) {
   return (
     <Card>
       <ImageWrapper>

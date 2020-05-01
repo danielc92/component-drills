@@ -40,7 +40,7 @@ const Paragraph = styled.p`
   color: grey;
   margin: 0;
 `
-const FooterItem = styled.div`
+const FooterItem = styled.div<{ background?: string }>`
   display: flex;
   color: #fff;
   background: ${(props) => props.background};
@@ -49,7 +49,7 @@ const FooterItem = styled.div`
   padding: 16px;
 `
 
-const Footer = styled.div`
+const Footer = styled.div<{ background: string }>`
   display: flex;
   justify-content: space-evenly;
   background-color: ${(props) => props.background};
@@ -70,7 +70,20 @@ const FooterItemSubtext = styled.p`
   text-transform: uppercase;
   font-size: 10px;
 `
-export default function index({ cards }) {
+interface IProps {
+  cards: Array<{
+    image: string
+    color: string
+    title: string
+    text: string
+    timestamp: string
+    footerItems: Array<{
+      text: string
+      subText: string
+    }>
+  }>
+}
+export default function index({ cards }: IProps) {
   return (
     <Grid>
       {cards.map((c) => (

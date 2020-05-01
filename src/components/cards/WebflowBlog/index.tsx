@@ -12,7 +12,7 @@ const Grid = styled.section`
 
 const Card = styled.div``
 
-const Image = styled.a`
+const Image = styled.a<{ src: string }>`
   display: block;
   cursor: pointer;
   height: 250px;
@@ -59,8 +59,17 @@ const Paragraph = styled.p`
   line-height: 1.5;
   color: grey;
 `
-
-export default function index({ cards }) {
+interface IProps {
+  cards: Array<{
+    timestamp: string
+    overlayColour: string
+    text: string
+    color: string
+    title: string
+    image: string
+  }>
+}
+export default function index({ cards }: IProps) {
   return (
     <Grid>
       {cards.map((c) => (

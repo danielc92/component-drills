@@ -36,19 +36,18 @@ const Text = styled.h3`
   font-family: "Lora", serif;
 `
 
-const CarouselItem = styled.div`
-  display: ${props => (props.active ? "" : "none")};
+const CarouselItem = styled.div<{ active: boolean }>`
+  display: ${(props) => (props.active ? "" : "none")};
 `
 
-const CarouselButton = styled.button`
+const CarouselButton = styled.button<{active:boolean}>`
   width: 13px;
   height: 13px;
   outline: none;
   border: none;
-  margin-right: 8px;
+  margin-right: (props)
   border: ${props => (props.active ? "none" : "1px solid black")};
-  border-radius: 50%;
-  background: ${props => (props.active ? "#03A87C" : "transparent")};
+  border-radius: 50%;(props)ackground: ${props => (props.active ? "#03A87C" : "transparent")};
   transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
 `
 
@@ -86,7 +85,7 @@ function QuoteSvg() {
 }
 
 class index extends Component {
-  state = {
+  state = {,
     activeItem: 0
   }
 

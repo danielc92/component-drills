@@ -1,5 +1,4 @@
 import React from "react"
-import faker from "faker"
 import styled from "styled-components"
 
 const Card = styled.div`
@@ -82,18 +81,20 @@ const Tagline = styled.p`
   background: #f3f3f3;
   display: inline-block;
 `
-
+interface IProps {
+  authorSrc: string
+  authorName: string
+  title: string
+  tagline: string
+  text: string
+}
 export default function index({
-  imageSrc,
   authorSrc,
   authorName,
   title,
   tagline,
-  tags,
   text,
-  datePosted,
-  readTime,
-}) {
+}: IProps) {
   return (
     <Card>
       <Left>

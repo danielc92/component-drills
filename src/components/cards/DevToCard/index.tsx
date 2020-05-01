@@ -1,5 +1,4 @@
 import React from "react"
-import faker from "faker"
 import styled from "styled-components"
 
 const Card = styled.div`
@@ -27,7 +26,7 @@ const Tag = styled.span`
   margin: 0 8px 8px 0;
 `
 
-const Content = styled.div`
+const Content = styled.div<{ between?: boolean }>`
   display: flex;
   justify-content: ${(props) => (props.between ? "space-between" : "")};
 `
@@ -52,8 +51,20 @@ const RightBox = styled.div`
   display: flex;
   align-items: center;
 `
-
-export default function index({ imageSrc, title, tags, datePosted, readTime }) {
+interface IProps {
+  imageSrc: string
+  title: string
+  tags: string[]
+  datePosted: string
+  readTime: string
+}
+export default function index({
+  imageSrc,
+  title,
+  tags,
+  datePosted,
+  readTime,
+}: IProps) {
   return (
     <Card>
       <Content>

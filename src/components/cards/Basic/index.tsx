@@ -39,9 +39,9 @@ const TagGroup = styled.div`
   flex-wrap: wrap;
 `
 
-const Tag = styled.div`
+const Tag = styled.div<{ background: string }>`
   display: inline-block;
-  background: ${props => (props.background ? props.background : "darkgray")};
+  background: ${(props) => (props.background ? props.background : "darkgray")};
   color: #fff;
   font-size: 10px;
   padding: 4px;
@@ -66,7 +66,7 @@ function index() {
               {faker.random
                 .words(3)
                 .split(" ")
-                .map(word => (
+                .map((word: string) => (
                   <Tag background="crimson"># {word}</Tag>
                 ))}
             </TagGroup>

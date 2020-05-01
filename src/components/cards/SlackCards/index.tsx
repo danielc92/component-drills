@@ -57,8 +57,17 @@ const Link = styled.a`
   font-weight: bold;
   text-decoration: none;
 `
-
-export default function index({ ctaText, cards }) {
+interface IProps {
+  ctaText: string
+  cards: Array<{
+    title: string
+    type: string
+    image: string
+    linkUrl: string
+    linkText: string
+  }>
+}
+export default function index({ ctaText, cards }: IProps) {
   return (
     <Section>
       <Header>{ctaText}</Header>
