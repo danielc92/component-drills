@@ -6,7 +6,7 @@ const TagGroup = styled.div`
   flex-wrap: wrap;
 `
 
-const Tag = styled.div`
+const Tag = styled.div<{ background: string; rounded: boolean }>`
   color: ${(props) => (props.color ? props.color : "#000")};
   background: ${(props) => (props.background ? props.background : "#cecece")};
   padding: 4px 12px;
@@ -15,7 +15,15 @@ const Tag = styled.div`
   border-radius: ${(props) => (props.rounded ? "20px" : "")};
 `
 
-export default function index({ tags, rounded }) {
+interface IProps {
+  tags: Array<{
+    text: string
+    color: string
+    background: string
+  }>
+  rounded: boolean
+}
+export default function index({ tags, rounded }: IProps) {
   return (
     <TagGroup>
       {tags.map((t) => (

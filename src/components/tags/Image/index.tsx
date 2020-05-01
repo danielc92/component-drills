@@ -25,12 +25,17 @@ const TagImage = styled.img`
 const TagText = styled.p`
   margin: 0;
 `
-
-export default function index({ tags, rounded }) {
+interface IProps {
+  tags: Array<{
+    src: string
+    text: string
+  }>
+}
+export default function index({ tags }: IProps) {
   return (
     <TagGroup>
       {tags.map((t) => (
-        <Tag rounded={rounded}>
+        <Tag>
           <TagImage src={t.src}></TagImage>
           <TagText>{t.text}</TagText>
         </Tag>
