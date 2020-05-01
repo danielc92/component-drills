@@ -4,6 +4,7 @@ import Dev from "../components/cards/DevToCard"
 import DevBlog from "../components/cards/DevToBlogCard"
 import Webflow from "../components/cards/WebflowBlog"
 import Slack from "../components/cards/SlackCards"
+import Pricing from "../components/cards/Pricing"
 import Highlighted from "../components/cards/Highlighted"
 import BlogCard from "../components/cards/BlogCard"
 import faker from "faker"
@@ -41,6 +42,69 @@ for (let i = 0; i < 7; i++) {
 
 export const BasicCard = () => {
   return <Basic />
+}
+
+export const PricingCards = () => {
+  return (
+    <Pricing
+      cards={[
+        {
+          background: "#36a571",
+          color: "white",
+          title: "standard",
+          price: "$49.99",
+          priceInterval: "per month",
+          features: [
+            "lorem ipsum",
+            "delore perscu",
+            "lorem bipud",
+            "delore perscu",
+            "lorem bipud",
+          ],
+          cta: {
+            link: "#",
+            text: "Add to cart",
+          },
+        },
+        {
+          background: "#36a571",
+          color: "white",
+          title: "standard",
+          price: "$49.99",
+          priceInterval: "per month",
+          features: [
+            "lorem ipsum",
+            "delore perscu",
+            "lorem bipud",
+            "delore perscu",
+            "lorem bipud",
+          ],
+          cta: {
+            link: "#",
+            text: "Add to cart",
+          },
+        },
+        {
+          background: "#36a571",
+          color: "white",
+          title: "standard",
+          price: "$49.99",
+          priceInterval: "per month",
+          features: [
+            "lorem ipsum",
+            "delore perscu",
+            "lorem bipud",
+            "delore perscu",
+            "lorem bipud",
+          ],
+          cta: {
+            link: "#",
+            text: "Add to cart",
+          },
+        },
+      ]}
+    />
+  )
 }
 
 export const DevToListCard = () => {
