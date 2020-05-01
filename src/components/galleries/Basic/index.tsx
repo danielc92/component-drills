@@ -15,7 +15,7 @@ const Container = styled.div`
   background: #303030;
   margin: 0 auto;
 `
-const Image = styled.img`
+const Image = styled.img<{ zoomed: boolean; grayscale: boolean }>`
   width: 100%;
   height: auto;
   max-height: 600px;
@@ -83,7 +83,11 @@ const ArrowRight = styled.button`
   font-weight: bold;
   cursor: pointer;
 `
-export default function index({ images }) {
+
+interface IProps {
+  images: Array<any>
+}
+export default function index({ images }: IProps) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [current, setcurrent] = useState(0)
   // eslint-disable-next-line react-hooks/rules-of-hooks

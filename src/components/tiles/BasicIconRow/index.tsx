@@ -14,14 +14,12 @@ const TileGrid = styled.div`
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
 `
-const Tile = styled.div`
+const Tile = styled.div<{ background: string }>`
   text-align: center;
-  background: ${props => (props.background ? props.background : "")};
+  background: ${(props) => (props.background ? props.background : "")};
   padding: 16px;
   border-radius: 4px;
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
+
 `
 
 const TileImage = styled.img`
@@ -39,12 +37,21 @@ const TileText = styled.p`
   font-size: 14px;
   color: rgba(0, 0, 0, 0.56);
 `
-export default function index({ data }) {
+interface IProps {
+  data: Array<{
+    title: string
+    text: string
+    imageSrc: string
+    background: string
+  }>
+}
+export default function index({ data }: IProps) {
   return (
     <Section>
+      (x){" "}
       <Container>
         <TileGrid>
-          {data.map(x => (
+          {data.map((x) => (
             <Tile background={x.background}>
               <TileImage src={x.imageSrc} />
               <TileTitle>{x.title}</TileTitle>

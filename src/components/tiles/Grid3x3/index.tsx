@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Grid = styled.div`
+const Grid = styled.div<{ gapless: boolean }>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -9,7 +9,11 @@ const Grid = styled.div`
   max-width: 800px;
 `
 
-const GridTile = styled.div`
+const GridTile = styled.div<{
+  backgroundColor: string
+  doubleSize: boolean
+  imageSrc: string
+}>`
   background-color: ${(props) => props.backgroundColor};
   color: ${(props) => props.color};
   padding: 24px;
@@ -26,7 +30,18 @@ const GridTitle = styled.h2`
   margin: 0 0 12px 0;
 `
 
-export default function index({ items, gapless }) {
+interface IProps {
+  items: Array<{
+    doubleSize: boolean
+    color: string
+    backgroundColor: string
+    imageSrc: string
+    title: string
+    text: string
+  }>
+  gapless: boolean
+}
+export default function index({ items, gapless }: IProps) {
   return (
     <Grid gapless={gapless}>
       {items.map((i) => (

@@ -63,7 +63,15 @@ const Link = styled.a`
   text-decoration: none;
   font-weight: bold;
 `
-
+interface IProps {
+  title: string
+  subtitle: string
+  placeholder: string
+  buttonText: string
+  inputSideText: string
+  helpText: string
+  link: { url: string; text: string }
+}
 export default function index({
   title,
   subtitle,
@@ -71,8 +79,8 @@ export default function index({
   buttonText,
   inputSideText,
   helpText,
-  link
-}) {
+  link,
+}: IProps) {
   return (
     <Wrapper>
       <Content>

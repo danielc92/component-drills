@@ -42,7 +42,13 @@ const Tag = styled.span`
   margin-left: 8px;
   font-size: 12px;
 `
-export default function index({ columns }) {
+interface IProps {
+  columns: Array<{
+    title: string
+    links: Array<{ tag: string; text: string; url: string }>
+  }>
+}
+export default function index({ columns }: IProps) {
   return (
     <Section>
       {columns.map((c) => (

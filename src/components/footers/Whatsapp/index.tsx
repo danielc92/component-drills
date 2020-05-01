@@ -27,7 +27,14 @@ const ColumnItem = styled.a`
   margin-bottom: 8px;
   text-decoration: none;
 `
-export default function index({ columns }) {
+
+interface IProps {
+  columns: Array<{
+    title: string
+    links: Array<{ tag: string; text: string; url: string }>
+  }>
+}
+export default function index({ columns }: IProps) {
   return (
     <Section>
       {columns.map((c) => (

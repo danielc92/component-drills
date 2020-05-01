@@ -130,6 +130,16 @@ const Checkbox = styled.label`
   }
 `
 
+interface IProps {
+  emailLabel: string
+  passwordLabel: string
+  emailPlaceholder: string
+  passwordPlaceholder: string
+  buttonText: string
+  retainText: string
+  forgotPasswordText: string
+}
+
 export default function index({
   emailLabel,
   passwordLabel,
@@ -138,7 +148,7 @@ export default function index({
   buttonText,
   retainText,
   forgotPasswordText,
-}) {
+}: IProps) {
   return (
     <Form>
       <Label>{emailLabel}</Label>
