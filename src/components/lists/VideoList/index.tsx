@@ -6,7 +6,7 @@ const VideoItem = styled.div`
   margin-bottom: 16px;
 `
 
-const VideoThumbnail = styled.div`
+const VideoThumbnail = styled.div<{ imageSrc: string }>`
   background-image: url(${(props) => props.imageSrc});
   background-size: cover;
   width: 180px;
@@ -53,7 +53,15 @@ const Container = styled.section`
   max-width: 800px;
 `
 
-export default function index({ data }) {
+interface IProps {
+  data: Array<{
+    imageSrc: string
+    time: string
+    title: string
+    studio: string
+  }>
+}
+export default function index({ data }: IProps) {
   return (
     <Container>
       {data.map((d) => (

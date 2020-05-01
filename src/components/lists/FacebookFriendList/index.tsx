@@ -49,10 +49,10 @@ const Description = styled.div`
 const ButtonGroup = styled.div`
   display: flex;
 `
-const Button = styled.a<{secondary: boolean}>`
+const Button = styled.a<{ secondary: boolean }>`
   border: 1px solid black;
-  background: ${props => (props.secondary ? "#EBEDF0" : "#365899")};
-  color: ${props => (props.secondary ? "#5b5b5b" : "#fff")};
+  background: ${(props) => (props.secondary ? "#EBEDF0" : "#365899")};
+  color: ${(props) => (props.secondary ? "#5b5b5b" : "#fff")};
   font-size: 12px;
   padding: 4px 12px;
   border-radius: 2px;
@@ -68,18 +68,22 @@ const Content = styled.div`
 
 interface IFriend {
   buttonText: string
-    buttonText2:string
-    name:string
-    src:string
-     mutualText: string
+  buttonText2: string
+  name: string
+  src: string
+  mutualText: string
 }
 
-export default function index({ friends }:{friends: IFriend[]}) {
+interface IProps {
+  friends: IFriend[]
+}
+
+export default function index({ friends }: IProps) {
   return (
     <Wrapper>
       <Header>People You May Know</Header>
       <Content>
-        {friends.map(i => (
+        {friends.map((i) => (
           <FriendItem>
             <Info>
               <Avatar src={i.src}></Avatar>

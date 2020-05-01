@@ -52,7 +52,12 @@ const Members = styled.p`
   margin: 0;
   font-size: 12px;
 `
-export default function index({ title, items }) {
+
+interface IProps {
+  title: string
+  items: Array<{ imageSrc: string; members: string; name: string }>
+}
+export default function index({ title, items }: IProps) {
   return (
     <Card>
       <Title>{title}</Title>

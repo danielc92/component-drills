@@ -39,7 +39,17 @@ const Image = styled.img`
   width: 100%;
   height: auto;
 `
-export default function index({ articles }) {
+
+interface IProps {
+  articles: Array<{
+    title: string
+    author: string
+    summary: string
+    date: string
+    image: string
+  }>
+}
+export default function index({ articles }: IProps) {
   return (
     <Container>
       {articles.map((a) => (
