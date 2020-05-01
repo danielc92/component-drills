@@ -5,6 +5,7 @@ import DevBlog from "../components/cards/DevToBlogCard"
 import Webflow from "../components/cards/WebflowBlog"
 import Slack from "../components/cards/SlackCards"
 import Highlighted from "../components/cards/Highlighted"
+import BlogCard from "../components/cards/BlogCard"
 import faker from "faker"
 import Bona from "../components/cards/Bona"
 import image1 from "./images/harley-davidson-eeTJKC_wz34-unsplash.jpg"
@@ -77,6 +78,21 @@ export const SlackCards = () => (
   <Slack ctaText="What's new at Flack" cards={cards} />
 )
 
+export const BlogCards = () => (
+  <CenterHorizontalAndVertical>
+    <BlogCard
+      summary="Lorem ipsum delore Lorem ipsum delore Lorem ipsum delore Lorem ipsum delore "
+      title="Lorem Ipsum Delore"
+      linkText="Read more"
+      linkUrl="#"
+      imageSrc={image4}
+      timestamp="2015-03-10"
+      commentCount="20"
+      timestampSrc={svgComment}
+      statSrc={svgComment}
+    />
+  </CenterHorizontalAndVertical>
+)
 export const BonaCard = () => (
   <CenterHorizontalAndVertical>
     <Bona
