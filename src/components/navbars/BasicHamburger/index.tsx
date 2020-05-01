@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-const NavigationWrapper = styled.nav`
+const NavigationWrapper = styled.nav<{ background: string }>`
   padding: 8px 24px;
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@ const NavigationItems = styled.div`
   }
 `
 
-const NavigationItem = styled.a`
+const NavigationItem = styled.a<{ backgroundHover: string }>`
   color: #000;
   text-decoration: none;
   display: block;
@@ -61,7 +61,7 @@ const NavigationItem = styled.a`
   }
 `
 
-const HiddenLinkItems = styled.div`
+const HiddenLinkItems = styled.div<{ show: boolean }>`
   display: ${(props) => (props.show ? "" : "none")};
   position: absolute;
   top: 24px;
@@ -71,14 +71,23 @@ const HiddenLinkItems = styled.div`
   padding: 8px 16px;
   border: 1px solid #cacaca;
 `
-
+interface IProps {
+  iconSrc: string
+  links: Array<{
+    text: string
+    url: string
+  }>
+  color: string
+  background: string
+  backgroundHover: string
+}
 export default function index({
   iconSrc,
   links,
   color,
   background,
   backgroundHover,
-}) {
+}: IProps) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [menuState, setMenu] = useState(false)
   return (

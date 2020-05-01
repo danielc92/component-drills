@@ -42,7 +42,7 @@ const Link = styled.a`
     text-decoration: underline;
   }
 `
-const Button = styled.a`
+const Button = styled.a<{ primary?: boolean }>`
   display: block;
   padding: 12px 16px;
   cursor: pointer;
@@ -53,12 +53,22 @@ const Button = styled.a`
   color: ${(props) => (props.primary ? "white" : "black")};
   background: ${(props) => (props.primary ? "#611f69" : "transparent")};
 `
-
-export default function index({ signInButton, links, getStartedButton }) {
+interface IProps {
+  signInButton: string
+  links: Array<{ url: string; text: string }>
+  getStartedButton: string
+  logoText: string
+}
+export default function index({
+  signInButton,
+  links,
+  getStartedButton,
+  logoText,
+}: IProps) {
   return (
     <NavbarWrapper>
       <NavbarLeft>
-        <Logo>flack</Logo>
+        <Logo>{logoText}</Logo>
         <LinksContainer>
           {links.map((l) => (
             <Link href={l.url}>{l.text}</Link>

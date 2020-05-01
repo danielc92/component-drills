@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-const NavigationWrapper = styled.nav`
+const NavigationWrapper = styled.nav<{ background: string }>`
   padding: 8px 24px;
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,7 @@ const NavigationItems = styled.div`
   }
 `
 
-const NavigationItem = styled.a`
+const NavigationItem = styled.a<{ backgroundHover?: string }>`
   margin-right: 8px;
   display: block;
   text-decoration: none;
@@ -44,7 +44,7 @@ const NavigationItem = styled.a`
   }
 `
 
-const Drawer = styled.div`
+const Drawer = styled.div<{ open: boolean }>`
   position: fixed;
   right: 0;
   bottom: 0;
@@ -58,7 +58,7 @@ const Drawer = styled.div`
     props.open ? "translateX(0px)" : "translateX(100%)"};
 `
 
-const Overlay = styled.div`
+const Overlay = styled.div<{ open: boolean }>`
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
   right: 0;
@@ -79,13 +79,25 @@ const Menu = styled.img`
     display: block;
   }
 `
+
+interface ILink {
+  url: string
+  text: string
+}
+interface IProps {
+  menuIcon: string
+  links: Array<ILink>
+  color: string
+  background: string
+  backgroundHover?: string
+}
 export default function index({
   menuIcon,
   links,
   color,
   background,
   backgroundHover,
-}) {
+}: IProps) {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [drawerOpen, setDrawer] = useState(false)
 

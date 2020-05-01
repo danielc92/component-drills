@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 
-const NavigationWrapper = styled.nav`
+const NavigationWrapper = styled.nav<{ background: string }>`
   padding: 8px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: ${props => props.background};
-  color: ${props => props.color};
+  background: ${(props) => props.background};
+  color: ${(props) => props.color};
 `
 const Logo = styled.a`
   font-weight: bold;
@@ -20,7 +20,7 @@ const NavigationItems = styled.div`
   display: flex;
 `
 
-const NavigationItem = styled.a`
+const NavigationItem = styled.a<{ backgroundHover: string }>`
   margin-right: 8px;
   padding: 8px;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -33,11 +33,16 @@ const NavigationItem = styled.a`
   }
 
   :hover {
-    background-color: ${props => props.backgroundHover};
+    background-color: ${(props) => props.backgroundHover};
   }
 `
 
-export default function index({ color, background, backgroundHover }) {
+interface IProps {
+  color: string
+  background: string
+  backgroundHover: string
+}
+export default function index({ color, background, backgroundHover }: IProps) {
   return (
     <NavigationWrapper color={color} background={background}>
       <Logo>Navbar</Logo>
