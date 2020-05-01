@@ -1,7 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-const Note = styled.div`
+const Note = styled.div<{
+  rounded: boolean
+  type: "danger" | "success" | "primary"
+  centered: boolean
+}>`
   text-align: ${(props) => (props.centered === true ? "center" : "none")};
   max-width: 768px;
   background: ${(props) =>
@@ -17,7 +21,10 @@ const Note = styled.div`
   border-radius: ${(props) => (props.rounded ? "4px" : "0px")};
 `
 
-const NoteHeader = styled.h5`
+const NoteHeader = styled.h5<{
+  rounded: boolean
+  type: "danger" | "success" | "primary"
+}>`
   border-top-right-radius: ${(props) => (props.rounded ? "4px" : "0px")};
   border-top-left-radius: ${(props) => (props.rounded ? "4px" : "0px")};
   margin: 0;
@@ -40,21 +47,22 @@ const NoteText = styled.p`
   font-size: 14px;
   line-height: 1.5;
 `
+interface IProps {
+  centered: boolean
+  title: string
+  text: string
+  type: "danger" | "success" | "primary"
+  rounded: boolean
+}
 export default function index({
   centered,
   title,
   text,
   type,
   rounded,
-  borderStyle,
-}) {
+}: IProps) {
   return (
-    <Note
-      centered={centered}
-      type={type}
-      rounded={rounded}
-      borderStyle={borderStyle}
-    >
+    <Note centered={centered} type={type} rounded={rounded}>
       <NoteHeader rounded={rounded} type={type}>
         {title}
       </NoteHeader>

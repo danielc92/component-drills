@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Note = styled.div<{
-  type: string
+  type: "danger" | "success" | "primary"
   borderStyle: string
   rounded: boolean
 }>`
@@ -40,17 +40,22 @@ const NoteText = styled.p`
   font-size: 14px;
   line-height: 1.5;
 `
-
+interface IProps {
+  title: string
+  text: string
+  type: "danger" | "success" | "primary"
+  rounded: boolean
+  borderStyle: string
+}
 export default function index({
-  centered,
   title,
   text,
   type,
   rounded,
   borderStyle,
-}) {
+}: IProps) {
   return (
-    <Note centered type={type} rounded={rounded} borderStyle={borderStyle}>
+    <Note type={type} rounded={rounded} borderStyle={borderStyle}>
       <NoteHeader>{title}</NoteHeader>
       <NoteText>{text}</NoteText>
     </Note>
