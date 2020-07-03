@@ -4,10 +4,12 @@ import Dev from "../components/buttons/DevButton"
 import OutlookButton from "../components/buttons/OutlookButton"
 import StorybookButton from "../components/buttons/StorybookButton"
 import styled from "styled-components"
+import { withKnobs, text, boolean, number } from "@storybook/addon-knobs"
 
 export default {
   title: "Buttons",
   component: OutlookButton,
+  decorators: [withKnobs],
 }
 
 // A wrapper to center buttons
@@ -36,11 +38,15 @@ export const DevButton = () => (
   </ButtonWrapper>
 )
 
-export const StorybookPrimary = () => (
-  <ButtonWrapper>
-    <StorybookButton text="Click me" />
-  </ButtonWrapper>
-)
+export const StorybookPrimary = () => {
+  const dynamicText = text("Button text", "Click me")
+  const dynamicSecondary = boolean("Secondary", false)
+  return (
+    <ButtonWrapper>
+      <StorybookButton text={dynamicText} secondary={dynamicSecondary} />
+    </ButtonWrapper>
+  )
+}
 
 export const StorybookSecondary = () => (
   <ButtonWrapper>
