@@ -60,6 +60,7 @@ const CardGrid = styled.section`
   display: grid;
   gap: 24px;
   grid-template-columns: 1fr 1fr 1fr;
+  width: 900px;
 `
 
 interface ICard {

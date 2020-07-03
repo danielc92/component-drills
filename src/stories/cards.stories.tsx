@@ -46,64 +46,66 @@ export const BasicCard = () => {
 
 export const PricingCards = () => {
   return (
-    <Pricing
-      cards={[
-        {
-          background: "#36a571",
-          color: "white",
-          title: "standard",
-          price: "$49.99",
-          priceInterval: "per month",
-          features: [
-            "lorem ipsum",
-            "delore perscu",
-            "lorem bipud",
-            "delore perscu",
-            "lorem bipud",
-          ],
-          cta: {
-            link: "#",
-            text: "Add to cart",
+    <CenterHorizontalAndVertical>
+      <Pricing
+        cards={[
+          {
+            background: "#36a571",
+            color: "white",
+            title: "standard",
+            price: "$49.99",
+            priceInterval: "per month",
+            features: [
+              "lorem ipsum",
+              "delore perscu",
+              "lorem bipud",
+              "delore perscu",
+              "lorem bipud",
+            ],
+            cta: {
+              link: "#",
+              text: "Add to cart",
+            },
           },
-        },
-        {
-          background: "#36a571",
-          color: "white",
-          title: "standard",
-          price: "$49.99",
-          priceInterval: "per month",
-          features: [
-            "lorem ipsum",
-            "delore perscu",
-            "lorem bipud",
-            "delore perscu",
-            "lorem bipud",
-          ],
-          cta: {
-            link: "#",
-            text: "Add to cart",
+          {
+            background: "#36a571",
+            color: "white",
+            title: "standard",
+            price: "$49.99",
+            priceInterval: "per month",
+            features: [
+              "lorem ipsum",
+              "delore perscu",
+              "lorem bipud",
+              "delore perscu",
+              "lorem bipud",
+            ],
+            cta: {
+              link: "#",
+              text: "Add to cart",
+            },
           },
-        },
-        {
-          background: "#36a571",
-          color: "white",
-          title: "standard",
-          price: "$49.99",
-          priceInterval: "per month",
-          features: [
-            "lorem ipsum",
-            "delore perscu",
-            "lorem bipud",
-            "delore perscu",
-            "lorem bipud",
-          ],
-          cta: {
-            link: "#",
-            text: "Add to cart",
+          {
+            background: "#36a571",
+            color: "white",
+            title: "standard",
+            price: "$49.99",
+            priceInterval: "per month",
+            features: [
+              "lorem ipsum",
+              "delore perscu",
+              "lorem bipud",
+              "delore perscu",
+              "lorem bipud",
+            ],
+            cta: {
+              link: "#",
+              text: "Add to cart",
+            },
           },
-        },
-      ]}
-    />
+        ]}
+      />
+    </CenterHorizontalAndVertical>
   )
 }
 
@@ -166,9 +168,9 @@ export const BonaCard = () => (
       viewImageSrc={svgEye}
       commentImageSrc={svgComment}
       heartImageSrc={svgHeart}
-      statView={8}
-      statComment={43}
-      statLove={2}
+      statView="8"
+      statComment="73"
+      statLove="25"
     />
   </CenterHorizontalAndVertical>
 )

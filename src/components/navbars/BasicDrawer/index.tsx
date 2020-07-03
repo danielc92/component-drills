@@ -53,7 +53,8 @@ const Drawer = styled.div<{ open: boolean }>`
   top: 0;
   padding: 24px;
   background: #fff;
-  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.5s ease;
+  /* transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
   transform: ${(props) =>
     props.open ? "translateX(0px)" : "translateX(100%)"};
 `
