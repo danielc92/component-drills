@@ -41,6 +41,13 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx,tsx,ts}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/addon-info": "^5.3.18",
@@ -49,11 +56,17 @@
     "@storybook/addons": "^5.3.17",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "^5.3.17",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "faker": "^4.1.0",
     "react-docgen-typescript-loader": "^3.7.2",
+    "react-test-renderer": "^16.13.1",
     "ts-loader": "^7.0.2",
     "tslint": "^6.1.2",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.3.0"
+    "tslint-plugin-prettier": "^2.3.0",
+    "wcag-contrast": "^3.0.0"
   }
 }
