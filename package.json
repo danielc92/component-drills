@@ -41,13 +41,6 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/components/**/*.{js,jsx,tsx,ts}",
-      "!**/node_modules/**",
-      "!**/vendor/**"
-    ]
-  },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.17",
     "@storybook/addon-info": "^5.3.18",
