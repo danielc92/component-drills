@@ -33,7 +33,6 @@ describe("Dev Button", () => {
     const colorArray = colorText.match(/\d+/g)
     expect(colorArray.length).toEqual(3)
     expect(backgroundColorArray.length).toEqual(3)
-    console.log(colorArray, "COLOR ARRAY")
     const contrastScore = rgb(colorArray, backgroundColorArray)
     expect(contrastScore).toBeGreaterThanOrEqual(7)
   })
