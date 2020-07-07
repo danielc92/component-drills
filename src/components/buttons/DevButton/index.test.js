@@ -36,4 +36,14 @@ describe("Dev Button", () => {
     const contrastScore = rgb(colorArray, backgroundColorArray)
     expect(contrastScore).toBeGreaterThanOrEqual(7)
   })
+
+  it("Meets legible font size", () => {
+    const wrapper = Enzyme.mount(
+      <Button buttonText="Click me!" buttonHref="https://google.com" />
+    )
+    const domNode = wrapper.getDOMNode()
+    const style = getComputedStyle(domNode)
+    const fontSizeText = style.getPropertyValue("font-size")
+    expect(fontSizeText).toEqual("16px")
+  })
 })

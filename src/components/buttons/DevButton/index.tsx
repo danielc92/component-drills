@@ -9,6 +9,7 @@ const Button = styled.a`
   padding: 8px 12px;
   text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
   /* color: #cfd7ff; */
   color: #000;
   border: 1px solid #4e57ef;
