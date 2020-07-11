@@ -10,7 +10,7 @@ Enzyme.configure({
 
 describe("Storybook Button", () => {
   it("Should render successfully", () => {
-    const wrapper = Enzyme.shallow(<StorybookButton>Click me!</StorybookButton>)
+    const wrapper = Enzyme.shallow(<StorybookButton text="Click me!" />)
     expect(wrapper).toBeDefined()
   })
 
