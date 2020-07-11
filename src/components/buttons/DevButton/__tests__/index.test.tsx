@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "./index"
+import Button from "components/buttons/DevButton"
 import Enzyme from "enzyme"
 import Adapter from "enzyme-adapter-react-16"
 import { rgb } from "wcag-contrast"
