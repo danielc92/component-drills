@@ -60,6 +60,12 @@ const Button = styled.a<{ secondary: boolean }>`
   border: none;
   margin-right: 6px;
   font-weight: bold;
+  display: block;
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.95;
+  }
 `
 
 const Content = styled.div`
