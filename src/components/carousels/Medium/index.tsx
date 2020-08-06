@@ -40,20 +40,22 @@ const CarouselItem = styled.div<{ active: boolean }>`
   display: ${(props) => (props.active ? "" : "none")};
 `
 
+CarouselItem.displayName = "CarouselItem"
+
 const CarouselButton = styled.button<{ active: boolean }>`
-  width: 13px;
-  height: 13px;
+  width: 16px;
+  height: 16px;
   outline: none;
   border: none;
   margin-right: 8px;
-  border: ${(props) => (props.active ? "none" : "1px solid black")};
   border-radius: 50%;
-  background: ${(props) => (props.active ? "#03A87C" : "transparent")};
+  background: ${(props) => (props.active ? "#03A87C" : "#fff")};
   transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
 `
 
 const CarouselButtons = styled.div`
   display: flex;
+  align-items: center;
 `
 
 const AuthorWrapper = styled.div`
@@ -92,23 +94,23 @@ function QuoteSvg() {
 }
 
 interface IProps {
-  items: Array<{
-    text: string
-    authorUrl: string
-    authorName: string
-  }>
+  items: MediumCarouselItem[]
+  ctaText: string
 }
 
-const index = ({ items }: IProps) => {
+const MediumCarousel: React.FC<IProps> = ({ items, ctaText }) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [state, setstate] = useState<{ activeItem: number }>({ activeItem: 0 })
   return (
     <Section>
-      <CtaHeader>We have millions of readers from around the globe.</CtaHeader>
+      <CtaHeader>{ctaText}</CtaHeader>
       <Wrapper>
         <Quote>{QuoteSvg()}</Quote>
         {items.map((i, index) => (
-          <CarouselItem active={index === state.activeItem}>
+          <CarouselItem
+            key={index.toString()}
+            active={index === state.activeItem}
+          >
             <Text>{i.text}</Text>
             <AuthorWrapper>
               <AuthorImage src={i.authorUrl}></AuthorImage>
@@ -119,9 +121,10 @@ const index = ({ items }: IProps) => {
         <CarouselButtons>
           {items.map((i, index) => (
             <CarouselButton
+              key={index.toString()}
               active={index === state.activeItem}
               onClick={() => setstate({ activeItem: index })}
-            ></CarouselButton>
+            />
           ))}
         </CarouselButtons>
       </Wrapper>
@@ -129,4 +132,4 @@ const index = ({ items }: IProps) => {
   )
 }
 
-export default index
+export default MediumCarousel
