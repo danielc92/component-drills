@@ -28,16 +28,21 @@ describe("Medium Carousel Suite", () => {
   beforeAll(() => {
     wrapper = Enzyme.mount(<MediumCarousel ctaText={ctaText} items={items} />)
   })
+
+  afterAll(() => {
+    wrapper?.detach()
+  })
+
   it("Should render carousel successfully", () => {
     expect(wrapper).toBeDefined()
   })
 
-  it("Should include cta text in h1", () => {
+  it("Should render the correct CTA text", () => {
     expect(wrapper?.find("h1").text()).toBe(ctaText)
   })
 
   it("Should render an amount of buttons matching the length of items passed in", () => {
-    expect(wrapper?.find("button").length).toBe(items.length)
+    expect(wrapper?.find("CarouselButton").length).toBe(items.length)
   })
 
   it("There is one 'active' carousel item by default", () => {
@@ -48,9 +53,9 @@ describe("Medium Carousel Suite", () => {
     ).toHaveLength(1)
   })
 
-  it("After the second button, the active text should change to 'Cool Jeans'", () => {
+  it("After the second button is clicked, the active carousel item header text reads 'Cool Jeans'", () => {
     // Note: wrapper must be clicked before running findWhere. This cant be done in one line.
-    wrapper?.find("button").at(1).simulate("click")
+    wrapper?.find("CarouselButton").at(1).simulate("click")
 
     expect(
       wrapper

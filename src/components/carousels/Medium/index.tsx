@@ -53,6 +53,8 @@ const CarouselButton = styled.button<{ active: boolean }>`
   transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
 `
 
+CarouselButton.displayName = "CarouselButton"
+
 const CarouselButtons = styled.div`
   display: flex;
   align-items: center;
@@ -69,6 +71,7 @@ const AuthorText = styled.p`
   font-family: "Lora", serif;
   font-weight: bold;
 `
+
 const AuthorImage = styled.img`
   width: 32px;
   height: 32px;
