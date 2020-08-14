@@ -2,8 +2,9 @@ import React, { useState } from "react"
 import styled from "styled-components"
 
 const Tabs = styled.section`
-  border-radius: 6px;
   max-width: 500px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `
 const TabList = styled.div`
   display: flex;
@@ -13,36 +14,45 @@ const TabList = styled.div`
 interface ITabListButtonProps {
   isSelected: boolean
 }
+
 const TabListButton = styled.button<ITabListButtonProps>`
+  &[aria-selected="true"] {
+    outline: none;
+    font-weight: bold;
+    background-color: #fff;
+  }
+
+  :focus,
+  :active {
+    outline: dotted 1px #34eb;
+    z-index: 1;
+  }
+
+  outline: none;
   width: 100%;
   padding: 16px 0px;
   font-size: 16px;
-  transition: 0.1s ease;
-  outline: ${(p) => (p.isSelected ? "none" : "")};
-  border-bottom: ${(p) => (p.isSelected ? "none" : "2px solid #000")};
-  border-left: ${(p) => (p.isSelected ? "2px solid #000" : "none")};
-  border-right: ${(p) => (p.isSelected ? "2px solid #000" : "none")};
-  border-top: ${(p) =>
-    p.isSelected ? "4px solid #34eb" : "4px solid #f4f4f4"};
-  background-color: ${(p) => (p.isSelected ? "#fff" : "#f4f4f4")};
-  color: ${(p) => (p.isSelected ? "#000" : "#000")};
-  font-weight: ${(p) => (p.isSelected ? "bold" : "normal")};
 
+  transition: 0.1s ease;
+  border: none;
+  background-color: #ededed;
   :hover {
     color: #34eb;
   }
 `
 
 const TabPanel = styled.div`
-  padding: 16px;
+  padding: 24px;
   > p {
+    margin: 0;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 26px;
   }
 
-  border-right: 2px solid #000;
-  border-bottom: 2px solid #000;
-  border-left: 2px solid #000;
+  :focus,
+  :active {
+    outline: dotted 1px #34eb;
+  }
 `
 
 const AccessibleTabs: React.FC<IAccessibleTabProps> = ({
