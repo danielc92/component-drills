@@ -49,26 +49,31 @@ const Tag = styled.div<{ background: string }>`
 
   border-radius: 2px;
 `
-function index() {
+
+interface IBasicCard {
+  cardDescription: string
+  cardTitle: string
+  cardImageSource: string
+  cardTags: string[]
+  cardImageAlt: string
+}
+interface IProps {
+  cards: IBasicCard[]
+}
+
+function index({ cards }: IProps) {
   return (
     <CardGrid>
-      {new Array(8).fill(1).map((i, x) => (
+      {cards.map((card, _cardIndex) => (
         <Card>
-          <CardImage src={`https://i.picsum.photos/id/${x}/1280/720.jpg`} />
+          <CardImage alt={card.cardImageAlt} src={card.cardImageSource} />
           <CardContent>
-            <Header>{faker.name.firstName()}</Header>
-            <Paragraph>
-              Qui qui minim deserunt proident in fugiat ex voluptate
-              exercitation. Aute reprehenderitation. Aute reprehenderit ullamco
-              ea est aliquip didunt nulla.
-            </Paragraph>
+            <Header>{card.cardTitle}</Header>
+            <Paragraph>{card.cardDescription}</Paragraph>
             <TagGroup>
-              {faker.random
-                .words(3)
-                .split(" ")
-                .map((word: string) => (
-                  <Tag background="crimson"># {word}</Tag>
-                ))}
+              {card.cardTags.map((word) => (
+                <Tag background="crimson"># {word}</Tag>
+              ))}
             </TagGroup>
           </CardContent>
         </Card>

@@ -23,7 +23,13 @@ export default {
   title: "Cards",
 }
 
-let DevCardData = []
+let DevCardData: {
+  imageSrc: string
+  title: string
+  tags: string[]
+  datePosted: string
+  readTime: string
+}[] = []
 
 for (let i = 0; i < 7; i++) {
   const data = {
@@ -41,7 +47,47 @@ for (let i = 0; i < 7; i++) {
 }
 
 export const BasicCard = () => {
-  return <Basic />
+  return (
+    <Basic
+      cards={[
+        {
+          cardDescription: faker.lorem.words(20),
+          cardTitle: faker.lorem.words(4),
+          cardImageSource: faker.image.imageUrl(),
+          cardTags: faker.lorem.words(6).split(" "),
+          cardImageAlt: faker.lorem.words(4),
+        },
+        {
+          cardDescription: faker.lorem.words(20),
+          cardTitle: faker.lorem.words(4),
+          cardImageSource: faker.image.imageUrl(),
+          cardTags: faker.lorem.words(6).split(" "),
+          cardImageAlt: faker.lorem.words(4),
+        },
+        {
+          cardDescription: faker.lorem.words(20),
+          cardTitle: faker.lorem.words(4),
+          cardImageSource: faker.image.imageUrl(),
+          cardTags: faker.lorem.words(6).split(" "),
+          cardImageAlt: faker.lorem.words(4),
+        },
+        {
+          cardDescription: faker.lorem.words(20),
+          cardTitle: faker.lorem.words(4),
+          cardImageSource: faker.image.imageUrl(),
+          cardTags: faker.lorem.words(6).split(" "),
+          cardImageAlt: faker.lorem.words(4),
+        },
+        {
+          cardDescription: faker.lorem.words(20),
+          cardTitle: faker.lorem.words(4),
+          cardImageSource: faker.image.imageUrl(),
+          cardTags: faker.lorem.words(6).split(" "),
+          cardImageAlt: faker.lorem.words(4),
+        },
+      ]}
+    />
+  )
 }
 
 export const PricingCards = () => {

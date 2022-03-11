@@ -58,6 +58,7 @@ interface IProps {
   datePosted: string
   readTime: string
 }
+
 export default function index({
   imageSrc,
   title,
