@@ -18,3 +18,15 @@ interface IAccessibleTabProps {
   tabs: ArrayTwoOrMore<IAccessibleTab>
   tabsDescription: string
 }
+
+interface IFileSystem {
+  folderName: string
+  folderDescription: string
+  subFolders: Array<IFileSystem>
+}
+
+interface IChineseWhispers {
+  personName: string
+  whatTheyHeard: string
+  whisperedTo: Array<[]>
+}
