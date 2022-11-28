@@ -36,7 +36,7 @@ const Tag = styled.span`
 interface IProps {
   columns: Array<{
     title: string
-    links: Array<{ tag: string; text: string; url: string }>
+    links: Array<{ tag?: string; text: string; url: string }>
   }>
 }
 export default function index({ columns }: IProps) {

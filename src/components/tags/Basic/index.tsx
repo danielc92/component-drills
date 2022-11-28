@@ -6,7 +6,7 @@ const TagGroup = styled.div`
   flex-wrap: wrap;
 `
 
-const Tag = styled.div<{ background: string; rounded: boolean }>`
+const Tag = styled.div<{ background?: string; rounded?: boolean }>`
   color: ${(props) => (props.color ? props.color : "#000")};
   background: ${(props) => (props.background ? props.background : "#cecece")};
   padding: 4px 12px;
@@ -21,7 +21,7 @@ interface IProps {
     color: string
     background: string
   }>
-  rounded: boolean
+  rounded?: boolean
 }
 export default function index({ tags, rounded }: IProps) {
   return (

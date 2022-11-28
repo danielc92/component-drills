@@ -61,7 +61,7 @@ const tags2 = [
     background: "#a01313",
   },
 ]
-export const Tags = () => <Basic tags={tags} />
+export const Tags = () => <Basic tags={tags2} />
 export const TagsWithCustomColour = () => <Basic tags={tags2} />
-export const TagsRounded = () => <Basic rounded tags={tags} />
+export const TagsRounded = () => <Basic rounded tags={tags2} />
 export const ImageTags = () => <Image tags={tags} />

@@ -24,11 +24,15 @@ export default {
 }
 
 let DevCardData: {
+  text:string
   imageSrc: string
+  authorSrc: string
   title: string
   tags: string[]
   datePosted: string
   readTime: string
+  tagline:string
+  authorName:string
 }[] = []
 
 for (let i = 0; i < 7; i++) {
@@ -160,7 +164,12 @@ export const DevToListCard = () => {
 }
 
 export const DevToBlogCard = () => {
-  return DevCardData.map((i) => <DevBlog {...i} />)
+  return DevCardData.map((i) => <DevBlog 
+  authorSrc={i.authorSrc}
+  authorName={i.authorName}
+  title={i.title}
+  tagline={i.tagline}
+  text={i.text} />)
 }
 
 const cards = [

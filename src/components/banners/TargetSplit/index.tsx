@@ -67,7 +67,7 @@ export default function index({ imageSrc, title, links }: IProps) {
                 flexDirection: "column",
               }}
             >
-              <Link href={i.url}>{i.text} ></Link>
+              <Link href={i.url}>{i.text}</Link>
             </div>
           ))}
         </Content>

@@ -19,9 +19,13 @@ export default {
 
 export const BasicBannerWithBlueBackground = () => (
   <Basic
+
+
     header="Aute laboris et"
     subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
     background="#2784e8"
+    ctaButtonText=""
+    ctaButtonHref="#"
   />
 )
 
@@ -40,6 +44,8 @@ export const BasicBannerWithRedBackground = () => (
     header="Aute laboris et"
     subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
     background="#d14b4b"
+    ctaButtonText="Learn more"
+    ctaButtonHref="#"
   />
 )
 export const BasicBannerWithBackgroundImage = () => (

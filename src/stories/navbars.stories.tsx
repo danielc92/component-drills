@@ -41,6 +41,7 @@ export const BasicCentered = () => <Centered />
 
 export const BasicDrawer = () => (
   <Drawer
+  background="#e54e4e" color="#fff"
     menuIcon={menuIcon}
     links={[
       { url: "#", text: "Home" },
@@ -53,6 +54,7 @@ export const BasicDrawer = () => (
 )
 export const SlackNavbar = () => (
   <Slack
+  logoText="Logo text"
     links={[
       { text: "Why flack?", url: "#" },
       { text: "Enterprise", url: "#" },

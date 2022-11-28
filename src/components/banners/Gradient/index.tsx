@@ -46,10 +46,9 @@ const SubHeader = styled.p`
 interface IProps {
   header: string
   subHeader: string
-  background: string
   type: string
 }
-export default function index({ header, subHeader, background, type }: IProps) {
+export default function index({ header, subHeader, type }: IProps) {
   return (
     <Banner gradient={gradients[type]}>
       <Header>{header}</Header>

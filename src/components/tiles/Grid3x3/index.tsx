@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Grid = styled.div<{ gapless: boolean }>`
+const Grid = styled.div<{ gapless?: boolean }>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
@@ -39,7 +39,7 @@ interface IProps {
     title: string
     text: string
   }>
-  gapless: boolean
+  gapless?: boolean
 }
 export default function index({ items, gapless }: IProps) {
   return (

@@ -10,9 +10,10 @@ export default {
 export const BasicDefault = () => (
   <CenterHorizontalAndVertical>
     <Basic
+    rounded={false}
       title="Officia aliquip eu ad"
       text="Dolore por fugiat cupidatat aliqua dolore incididunt. Cillum incididunt cupidatat dolor dolor Lorem duis reprehenderit ea magna duis officia. Eiusmod incididunt ipsum dolore voluptate ipsum ullamco. Tempor exercitation reprehenderit quis officia aliqua fugiat mollit adipisicing mollit exercitation ut ea laboris. Sint enim id ea eiusmod. Aute aliquip consequat labore consectetur dolore elit ut laborum."
-      type=""
+      type="primary"
     />
   </CenterHorizontalAndVertical>
 )
@@ -20,6 +21,7 @@ export const BasicDefault = () => (
 export const BasicDanger = () => (
   <CenterHorizontalAndVertical>
     <Basic
+    rounded={false}
       title="Officia aliquip eu ad"
       text="Dolore por fugiat cupidatat aliqua dolore incididunt. Cillum incididunt cupidatat dolor dolor Lorem duis reprehenderit ea magna duis officia. Eiusmod incididunt ipsum dolore voluptate ipsum ullamco. Tempor exercitation reprehenderit quis officia aliqua fugiat mollit adipisicing mollit exercitation ut ea laboris. Sint enim id ea eiusmod. Aute aliquip consequat labore consectetur dolore elit ut laborum."
       type="danger"
@@ -30,6 +32,7 @@ export const BasicDanger = () => (
 export const BasicSuccess = () => (
   <CenterHorizontalAndVertical>
     <Basic
+    rounded={false}
       title="Officia aliquip eu ad"
       text="Dolore por fugiat cupidatat aliqua dolore incididunt. Cillum incididunt cupidatat dolor dolor Lorem duis reprehenderit ea magna duis officia. Eiusmod incididunt ipsum dolore voluptate ipsum ullamco. Tempor exercitation reprehenderit quis officia aliqua fugiat mollit adipisicing mollit exercitation ut ea laboris. Sint enim id ea eiusmod. Aute aliquip consequat labore consectetur dolore elit ut laborum."
       type="success"
@@ -40,6 +43,7 @@ export const BasicSuccess = () => (
 export const BasicPrimary = () => (
   <CenterHorizontalAndVertical>
     <Basic
+    rounded={false}
       title="Officia aliquip eu ad"
       text="Dolore por fugiat cupidatat aliqua dolore incididunt. Cillum incididunt cupidatat dolor dolor Lorem duis reprehenderit ea magna duis officia. Eiusmod incididunt ipsum dolore voluptate ipsum ullamco. Tempor exercitation reprehenderit quis officia aliqua fugiat mollit adipisicing mollit exercitation ut ea laboris. Sint enim id ea eiusmod. Aute aliquip consequat labore consectetur dolore elit ut laborum."
       type="primary"
@@ -72,6 +76,7 @@ export const BasicSuccessRoundedLeft = () => (
 export const WithHeaderPrimaryRounded = () => (
   <CenterHorizontalAndVertical>
     <BasicWithHeader
+    centered={false}
       rounded
       title="Officia aliquip eu ad"
       text="Dolore por fugiat cupidatat aliqua dolore incididunt. Cillum incididunt cupidatat dolor dolor Lorem duis reprehenderit ea magna duis officia. Eiusmod incididunt ipsum dolore voluptate ipsum ullamco. Tempor exercitation reprehenderit quis officia aliqua fugiat mollit adipisicing mollit exercitation ut ea laboris. Sint enim id ea eiusmod. Aute aliquip consequat labore consectetur dolore elit ut laborum."
@@ -83,6 +88,7 @@ export const WithHeaderPrimaryRounded = () => (
 export const WithHeaderSuccessRounded = () => (
   <CenterHorizontalAndVertical>
     <BasicWithHeader
+    centered={false}
       rounded
       title="Officia aliquip eu ad"
       text="Dolore por fugiat cupidatat aliqua dolore incididunt. Cillum incididunt cupidatat dolor dolor Lorem duis reprehenderit ea magna duis officia. Eiusmod incididunt ipsum dolore voluptate ipsum ullamco. Tempor exercitation reprehenderit quis officia aliqua fugiat mollit adipisicing mollit exercitation ut ea laboris. Sint enim id ea eiusmod. Aute aliquip consequat labore consectetur dolore elit ut laborum."

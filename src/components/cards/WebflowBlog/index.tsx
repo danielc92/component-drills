@@ -64,7 +64,7 @@ interface IProps {
     timestamp: string
     overlayColour: string
     text: string
-    color: string
+    color?: string
     title: string
     image: string
   }>

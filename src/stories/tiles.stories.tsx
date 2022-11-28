@@ -17,22 +17,23 @@ const data = [
     imageSrc: svg1,
     title: "Lab minim ex enim in.",
     text: "Sit aliquip do do non nulla deserunt amet mollit sint.",
+  background: ""
   },
   {
     imageSrc: svg2,
     title: "Laboris id etn.",
     text: "Sit aliquip do do non nulla deserunt amet mollit sint.",
-  },
+    background: ""},
   {
     imageSrc: svg3,
     title: "Laid et minim minim ex enim in.",
     text: "Sit aliquip do do non nulla deserunt amet mollit sint.",
-  },
+    background: ""},
   {
     imageSrc: svg4,
     title: "Laboris id et mienim in.",
     text: "Sit aliquip do do non nulla deserunt amet mollit sint.",
-  },
+    background: ""},
 ]
 
 export const BasicIconRow = () => <Basic data={data} />
@@ -44,6 +45,7 @@ const gridItems = new Array(9).fill({
   backgroundColor: "#0c5ace",
   color: "#fff",
   title: "Lorem Ipsum",
+
   text:
     "Est ullamco ex consequat aliquip tempor non laboris sunt ut adipisicing.",
 })
@@ -87,7 +89,7 @@ const gridItems3 = [
 
 export const GridThreeByThree = () => (
   <CenterHorizontalAndVertical>
-    <Grid3x3 items={gridItems} />
+    <Grid3x3 items={gridItems}/>
   </CenterHorizontalAndVertical>
 )
 

@@ -85,7 +85,6 @@ const Title = styled.a`
   }
 `
 
-const CardImage = styled.img``
 export default function index({
   summary,
   title,

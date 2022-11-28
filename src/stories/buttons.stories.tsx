@@ -4,7 +4,7 @@ import Dev from "../components/buttons/DevButton"
 import OutlookButton from "../components/buttons/OutlookButton"
 import StorybookButton from "../components/buttons/StorybookButton"
 import styled from "styled-components"
-import { withKnobs, text, boolean, number } from "@storybook/addon-knobs"
+import { withKnobs, text, boolean } from "@storybook/addon-knobs"
 
 export default {
   title: "Buttons",
@@ -22,7 +22,7 @@ const ButtonWrapper = styled.div`
 
 export const OutlookButtonRegular = () => (
   <ButtonWrapper>
-    <OutlookButton>Create an account</OutlookButton>
+    <OutlookButton hollow={false}>Create an account</OutlookButton>
   </ButtonWrapper>
 )
 

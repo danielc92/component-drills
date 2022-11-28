@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import faker from "faker"
 
 const CardGrid = styled.section`
   display: grid;
