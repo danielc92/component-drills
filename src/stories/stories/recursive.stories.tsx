@@ -1,5 +1,5 @@
 import React from "react"
-import FileSystemComponent from "components/recursive/FileSystem"
+import FileSystemComponent from "../components/recursive/FileSystem"
 
 export default {
   title: "Recursive",

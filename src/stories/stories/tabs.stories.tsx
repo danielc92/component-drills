@@ -1,5 +1,5 @@
-import AccessibleTabs from "components/tabs/AccessibleTabs"
 import React from "react"
+import AccessibleTabs from "../components/tabs/AccessibleTabs"
 import { CenterHorizontalAndVertical } from "./layout"
 
 export default {

@@ -1,5 +1,4 @@
 import React from "react"
-import "../App.css"
 import Dev from "../components/buttons/DevButton"
 import OutlookButton from "../components/buttons/OutlookButton"
 import StorybookButton from "../components/buttons/StorybookButton"

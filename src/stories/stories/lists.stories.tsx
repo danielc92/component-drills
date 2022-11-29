@@ -1,5 +1,4 @@
 import React from "react"
-import "../App.css"
 import faker from "faker"
 import Techcrunch from "../components/lists/TechcrunchList"
 import VideoList from "../components/lists/VideoList"

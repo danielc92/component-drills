@@ -46,7 +46,7 @@ const SubHeader = styled.p`
 interface IProps {
   header: string
   subHeader: string
-  type: string
+  type: "kingYna" | "quepal" | "sublimeLight" | "moonlitAsteroid" | "yoda"
 }
 export default function index({ header, subHeader, type }: IProps) {
   return (
