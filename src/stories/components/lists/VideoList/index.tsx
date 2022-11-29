@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import React from "react"
+import styled from 'styled-components'
+import React from 'react'
 
 const VideoItem = styled.div`
   display: flex;
@@ -61,7 +61,7 @@ interface IProps {
     studio: string
   }>
 }
-export default function index({ data }: IProps) {
+export default function index ({ data }: IProps) {
   return (
     <Container>
       {data.map((d) => (

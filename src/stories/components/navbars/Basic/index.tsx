@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const NavigationWrapper = styled.nav<{ background: string }>`
   padding: 8px 24px;
@@ -42,7 +42,7 @@ interface IProps {
   background: string
   backgroundHover: string
 }
-export default function index({ color, background, backgroundHover }: IProps) {
+export default function index ({ color, background, backgroundHover }: IProps) {
   return (
     <NavigationWrapper color={color} background={background}>
       <Logo>Navbar</Logo>

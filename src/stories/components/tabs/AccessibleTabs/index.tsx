@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const Tabs = styled.section`
   max-width: 500px;
@@ -57,7 +57,7 @@ const TabPanel = styled.div`
 
 const AccessibleTabs: React.FC<IAccessibleTabProps> = ({
   tabs,
-  tabsDescription,
+  tabsDescription
 }) => {
   // eslint-disableext-line react-hooks/rules-of-hooks
   const [activeTab, setactiveTab] = useState<string>(tabs[0].buttonId)
@@ -71,7 +71,7 @@ const AccessibleTabs: React.FC<IAccessibleTabProps> = ({
             isSelected={activeTab === tab.buttonId}
             onClick={() => setactiveTab(tab.buttonId)}
             role="tab"
-            aria-selected={activeTab === tab.buttonId ? "true" : "false"}
+            aria-selected={activeTab === tab.buttonId ? 'true' : 'false'}
             aria-controls={tab.tabPanelId}
             id={tab.buttonId}
             tabIndex={0}

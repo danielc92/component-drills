@@ -1,10 +1,10 @@
-import NewYorker from "../components/forms/NewYorker"
-import Slack from "../components/forms/SlackSignIn"
-import React from "react"
-import { CenterHorizontalAndVertical } from "./layout"
+import NewYorker from '../components/forms/NewYorker'
+import Slack from '../components/forms/SlackSignIn'
+import React from 'react'
+import { CenterHorizontalAndVertical } from './layout'
 
 export default {
-  title: "Forms",
+  title: 'Forms'
 }
 
 export const SlackSignInForm = () => (
@@ -15,7 +15,7 @@ export const SlackSignInForm = () => (
       placeholder="your-workspace-url"
       buttonText="Continue"
       helpText="Don't know your workspace URL? "
-      link={{ text: "Find your workspace", url: "#" }}
+      link={{ text: 'Find your workspace', url: '#' }}
       inputSideText=".flack.com"
     />
   </CenterHorizontalAndVertical>

@@ -7,7 +7,7 @@ interface MediumCarouselItem {
 type ArrayTwoOrMore<T> = {
   0: T
   1: T
-} & Array<T>
+} & T[]
 interface IAccessibleTab {
   buttonText: string
   buttonId: string
@@ -22,7 +22,7 @@ interface IAccessibleTabProps {
 interface IFileSystem {
   folderName: string
   folderDescription: string
-  subFolders: Array<IFileSystem>
+  subFolders: IFileSystem[]
 }
 
 interface IChineseWhispers {

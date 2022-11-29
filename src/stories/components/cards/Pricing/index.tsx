@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Card = styled.div`
   border-radius: 4px;
 `
 
-const Header = styled.div<{ background: string; color: string }>`
+const Header = styled.div<{ background: string, color: string }>`
   background: ${(p) => p.background};
   color: ${(p) => p.color};
   text-align: center;
@@ -42,7 +42,7 @@ const Feature = styled.div<{ lastChild?: boolean }>`
   text-align: center;
   font-size: 12px;
   border-top: 1px solid grey;
-  border-bottom: ${(p) => (p.lastChild ? "1px solid grey" : "")};
+  border-bottom: ${(p) => (p.lastChild ? '1px solid grey' : '')};
 `
 const CtaBox = styled.div`
   background-color: #303030;
@@ -69,7 +69,7 @@ interface ICard {
   title: string
   price: string
   priceInterval: string
-  features: Array<string>
+  features: string[]
   cta: {
     link: string
     text: string
@@ -77,7 +77,7 @@ interface ICard {
 }
 
 interface IProps {
-  cards: Array<ICard>
+  cards: ICard[]
 }
 
 const index = ({ cards }: IProps) => {

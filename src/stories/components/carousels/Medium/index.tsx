@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 const Section = styled.section`
   display: flex;
 `
@@ -37,10 +37,10 @@ const Text = styled.h3`
 `
 
 const CarouselItem = styled.div<{ active: boolean }>`
-  display: ${(props) => (props.active ? "" : "none")};
+  display: ${(props) => (props.active ? '' : 'none')};
 `
 
-CarouselItem.displayName = "CarouselItem"
+CarouselItem.displayName = 'CarouselItem'
 
 const CarouselButton = styled.button<{ active: boolean }>`
   width: 16px;
@@ -49,11 +49,11 @@ const CarouselButton = styled.button<{ active: boolean }>`
   border: none;
   margin-right: 8px;
   border-radius: 50%;
-  background: ${(props) => (props.active ? "#03A87C" : "#fff")};
+  background: ${(props) => (props.active ? '#03A87C' : '#fff')};
   transition: all 0.24s cubic-bezier(0.165, 0.84, 0.44, 1);
 `
 
-CarouselButton.displayName = "CarouselButton"
+CarouselButton.displayName = 'CarouselButton'
 
 const CarouselButtons = styled.div`
   display: flex;
@@ -79,7 +79,7 @@ const AuthorImage = styled.img`
   margin-right: 8px;
 `
 
-function QuoteSvg() {
+function QuoteSvg () {
   return (
     <svg
       width="62"
@@ -102,7 +102,6 @@ interface IProps {
 }
 
 const MediumCarousel: React.FC<IProps> = ({ items, ctaText }) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [state, setstate] = useState<{ activeItem: number }>({ activeItem: 0 })
   return (
     <Section>

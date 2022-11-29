@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Banner = styled.div<{ imageSrc: string }>`
   background-image: url(${(props) => props.imageSrc});
@@ -34,7 +34,7 @@ interface IProps {
   imageSrc: string
 }
 
-export default function index({ header, subHeader, imageSrc }: IProps) {
+export default function index ({ header, subHeader, imageSrc }: IProps) {
   return (
     <Banner imageSrc={imageSrc}>
       <Content>

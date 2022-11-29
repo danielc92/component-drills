@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Section = styled.section``
 
@@ -35,7 +35,7 @@ const ButtonIconWrapper = styled.span`
 `
 
 const Span = styled.span<{ highlight: boolean }>`
-  color: ${(props) => (props.highlight ? "#00CA72" : "#000")};
+  color: ${(props) => (props.highlight ? '#00CA72' : '#000')};
 `
 interface IProps {
   title: string
@@ -43,21 +43,21 @@ interface IProps {
   buttonText: string
   buttonLink: string
 }
-export default function index({
+export default function index ({
   title,
   subTitle,
   buttonText,
-  buttonLink,
+  buttonLink
 }: IProps) {
   return (
     <Section>
       <Container>
         <CtaHeader>
-          {title.split(" ").map((i: string, index: number) => {
+          {title.split(' ').map((i: string, index: number) => {
             if (index === 0) {
               return <Span highlight>{i}&nbsp;</Span>
             }
-            return i + " "
+            return i + ' '
           })}
         </CtaHeader>
         <CtaSubHeader>{subTitle}</CtaSubHeader>

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Section = styled.section`
   background: #d6d6d6;
@@ -36,10 +36,10 @@ const Tag = styled.span`
 interface IProps {
   columns: Array<{
     title: string
-    links: Array<{ tag?: string; text: string; url: string }>
+    links: Array<{ tag?: string, text: string, url: string }>
   }>
 }
-export default function index({ columns }: IProps) {
+export default function index ({ columns }: IProps) {
   return (
     <Section>
       {columns.map((c) => (

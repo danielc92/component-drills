@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Card = styled.article`
   max-width: 400px;
@@ -85,7 +85,7 @@ const Title = styled.a`
   }
 `
 
-export default function index({
+export default function index ({
   summary,
   title,
   linkText,
@@ -94,7 +94,7 @@ export default function index({
   commentCount,
   imageSrc,
   statSrc,
-  timestampSrc,
+  timestampSrc
 }: IProps) {
   return (
     <Card>

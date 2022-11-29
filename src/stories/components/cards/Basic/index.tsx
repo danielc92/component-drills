@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const CardGrid = styled.section`
   display: grid;
@@ -40,7 +40,7 @@ const TagGroup = styled.div`
 
 const Tag = styled.div<{ background: string }>`
   display: inline-block;
-  background: ${(props) => (props.background ? props.background : "darkgray")};
+  background: ${(props) => (props.background ? props.background : 'darkgray')};
   color: #fff;
   font-size: 10px;
   padding: 4px;
@@ -60,7 +60,7 @@ interface IProps {
   cards: IBasicCard[]
 }
 
-function index({ cards }: IProps) {
+function index ({ cards }: IProps) {
   return (
     <CardGrid>
       {cards.map((card, _cardIndex) => (

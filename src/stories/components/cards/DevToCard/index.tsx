@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Card = styled.div`
   padding: 16px;
@@ -28,7 +28,7 @@ const Tag = styled.span`
 
 const Content = styled.div<{ between?: boolean }>`
   display: flex;
-  justify-content: ${(props) => (props.between ? "space-between" : "")};
+  justify-content: ${(props) => (props.between ? 'space-between' : '')};
 `
 
 const Button = styled.a`
@@ -59,12 +59,12 @@ interface IProps {
   readTime: string
 }
 
-export default function index({
+export default function index ({
   imageSrc,
   title,
   tags,
   datePosted,
-  readTime,
+  readTime
 }: IProps) {
   return (
     <Card>

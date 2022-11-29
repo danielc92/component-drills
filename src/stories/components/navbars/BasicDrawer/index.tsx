@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const NavigationWrapper = styled.nav<{ background: string }>`
   padding: 8px 24px;
@@ -56,7 +56,7 @@ const Drawer = styled.div<{ open: boolean }>`
   transition: 0.5s ease;
   /* transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
   transform: ${(props) =>
-    props.open ? "translateX(0px)" : "translateX(100%)"};
+    props.open ? 'translateX(0px)' : 'translateX(100%)'};
 `
 
 const Overlay = styled.div<{ open: boolean }>`
@@ -67,7 +67,7 @@ const Overlay = styled.div<{ open: boolean }>`
   left: 0;
   top: 0;
   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  display: ${(props) => (props.open ? "block" : "none")};
+  display: ${(props) => (props.open ? 'block' : 'none')};
 `
 
 const Menu = styled.img`
@@ -87,19 +87,18 @@ interface ILink {
 }
 interface IProps {
   menuIcon: string
-  links: Array<ILink>
+  links: ILink[]
   color: string
   background: string
   backgroundHover?: string
 }
-export default function index({
+export default function index ({
   menuIcon,
   links,
   color,
   background,
-  backgroundHover,
+  backgroundHover
 }: IProps) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [drawerOpen, setDrawer] = useState(false)
 
   const toggleDrawer = () => setDrawer(!drawerOpen)

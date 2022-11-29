@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.section`
   max-width: 700px;
@@ -70,16 +70,16 @@ interface IProps {
   buttonText: string
   inputSideText: string
   helpText: string
-  link: { url: string; text: string }
+  link: { url: string, text: string }
 }
-export default function index({
+export default function index ({
   title,
   subtitle,
   placeholder,
   buttonText,
   inputSideText,
   helpText,
-  link,
+  link
 }: IProps) {
   return (
     <Wrapper>

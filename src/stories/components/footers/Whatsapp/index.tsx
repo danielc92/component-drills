@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Section = styled.section`
   background: #273443;
@@ -31,17 +31,17 @@ const ColumnItem = styled.a`
 interface IProps {
   columns: Array<{
     title: string
-    links: Array<{ tag?: string; text: string; url: string }>
+    links: Array<{ tag?: string, text: string, url: string }>
   }>
 }
-export default function index({ columns }: IProps) {
+export default function index ({ columns }: IProps) {
   return (
     <Section>
-      {columns.map((c) => (
-        <Column>
+      {columns.map((c, i) => (
+        <Column key={i.toString()}>
           <ColumnTitle>{c.title}</ColumnTitle>
-          {c.links.map((l) => (
-            <ColumnItem href={l.url}>{l.text}</ColumnItem>
+          {c.links.map((l, i2) => (
+            <ColumnItem key={i2.toString()} href={l.url}>{l.text}</ColumnItem>
           ))}
         </Column>
       ))}

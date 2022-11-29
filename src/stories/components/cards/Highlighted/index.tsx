@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Grid = styled.div`
   display: grid;
@@ -83,7 +83,7 @@ interface IProps {
     }>
   }>
 }
-export default function index({ cards }: IProps) {
+export default function index ({ cards }: IProps) {
   return (
     <Grid>
       {cards.map((c) => (
@@ -92,7 +92,7 @@ export default function index({ cards }: IProps) {
           <CardContent>
             <Timestamp color={c.color}>{c.timestamp}</Timestamp>
             <Title>{c.title}</Title>
-            <Paragraph>{c.text.substring(0, 160) + ".."}</Paragraph>
+            <Paragraph>{c.text.substring(0, 160) + '..'}</Paragraph>
           </CardContent>
           <Footer background={c.color}>
             {c.footerItems.map((f) => (

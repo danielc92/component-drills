@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.section`
   max-width: 1000px;
@@ -51,9 +51,9 @@ const Link = styled.a`
 interface IProps {
   imageSrc: string
   title: string
-  links: { url: string; text: string }[]
+  links: Array<{ url: string, text: string }>
 }
-export default function index({ imageSrc, title, links }: IProps) {
+export default function index ({ imageSrc, title, links }: IProps) {
   return (
     <Wrapper>
       <TextSection>
@@ -62,9 +62,9 @@ export default function index({ imageSrc, title, links }: IProps) {
           {links.map((i) => (
             <div
               style={{
-                display: "flex",
-                alignItems: "flex-start",
-                flexDirection: "column",
+                display: 'flex',
+                alignItems: 'flex-start',
+                flexDirection: 'column'
               }}
             >
               <Link href={i.url}>{i.text}</Link>

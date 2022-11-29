@@ -1,21 +1,20 @@
-import React from "react"
-import OutlookButton from "components/buttons/OutlookButton"
-import Enzyme from "enzyme"
-import Adapter from "enzyme-adapter-react-16"
-import { rgb } from "wcag-contrast"
+import React from 'react'
+import OutlookButton from 'components/buttons/OutlookButton'
+import Enzyme from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
 
 Enzyme.configure({
-  adapter: new Adapter(),
+  adapter: new Adapter()
 })
 
-describe("Outlook button", () => {
-  it("Should render successfully", () => {
+describe('Outlook button', () => {
+  it('Should render successfully', () => {
     const wrapper = Enzyme.shallow(<OutlookButton>Click me!</OutlookButton>)
     expect(wrapper).toBeDefined()
   })
 
-  it("Should contain correct text", () => {
+  it('Should contain correct text', () => {
     const wrapper = Enzyme.shallow(<OutlookButton>Click me!</OutlookButton>)
-    expect(wrapper.text()).toEqual("Click me!")
+    expect(wrapper.text()).toEqual('Click me!')
   })
 })

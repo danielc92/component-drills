@@ -1,51 +1,51 @@
-import React from "react"
-import Basic from "../components/cards/Basic"
-import Dev from "../components/cards/DevToCard"
-import DevBlog from "../components/cards/DevToBlogCard"
-import Webflow from "../components/cards/WebflowBlog"
-import Slack from "../components/cards/SlackCards"
-import Pricing from "../components/cards/Pricing"
-import Highlighted from "../components/cards/Highlighted"
-import BlogCard from "../components/cards/BlogCard"
-import faker from "faker"
-import Bona from "../components/cards/Bona"
-import image1 from "./images/harley-davidson-eeTJKC_wz34-unsplash.jpg"
-import image2 from "./images/jason-leung-DC5zm4FeBoI-unsplash.jpg"
-import image3 from "./images/taylor-simpson-2SX1LEMppsA-unsplash.jpg"
-import image4 from "./images/andrea-cau-nV7GJmSq3zc-unsplash.jpg"
-import face1 from "./images/humans/face-5.png"
-import svgComment from "./svg/comment.svg"
-import svgEye from "./svg/eye.svg"
-import svgHeart from "./svg/heart.svg"
-import { CenterHorizontalAndVertical } from "./layout"
+import React from 'react'
+import Basic from '../components/cards/Basic'
+import Dev from '../components/cards/DevToCard'
+import DevBlog from '../components/cards/DevToBlogCard'
+import Webflow from '../components/cards/WebflowBlog'
+import Slack from '../components/cards/SlackCards'
+import Pricing from '../components/cards/Pricing'
+import Highlighted from '../components/cards/Highlighted'
+import BlogCard from '../components/cards/BlogCard'
+import faker from 'faker'
+import Bona from '../components/cards/Bona'
+import image1 from './images/harley-davidson-eeTJKC_wz34-unsplash.jpg'
+import image2 from './images/jason-leung-DC5zm4FeBoI-unsplash.jpg'
+import image3 from './images/taylor-simpson-2SX1LEMppsA-unsplash.jpg'
+import image4 from './images/andrea-cau-nV7GJmSq3zc-unsplash.jpg'
+import face1 from './images/humans/face-5.png'
+import svgComment from './svg/comment.svg'
+import svgEye from './svg/eye.svg'
+import svgHeart from './svg/heart.svg'
+import { CenterHorizontalAndVertical } from './layout'
 
 export default {
-  title: "Cards",
+  title: 'Cards'
 }
 
-let DevCardData: {
-  text:string
+const DevCardData: Array<{
+  text: string
   imageSrc: string
   authorSrc: string
   title: string
   tags: string[]
   datePosted: string
   readTime: string
-  tagline:string
-  authorName:string
-}[] = []
+  tagline: string
+  authorName: string
+}> = []
 
 for (let i = 0; i < 7; i++) {
   const data = {
     tagline: faker.lorem.words(4),
-    authorName: faker.name.firstName() + " " + faker.name.lastName(),
+    authorName: faker.name.firstName() + ' ' + faker.name.lastName(),
     authorSrc: face1,
     imageSrc: faker.image.imageUrl(),
     title: faker.lorem.words(4),
     text: faker.lorem.words(45),
-    tags: faker.lorem.words().split(" "),
-    datePosted: "10 March",
-    readTime: `${faker.random.number(32)} Minutes`,
+    tags: faker.lorem.words().split(' '),
+    datePosted: '10 March',
+    readTime: `${faker.random.number(32)} Minutes`
   }
   DevCardData.push(data)
 }
@@ -58,37 +58,37 @@ export const BasicCard = () => {
           cardDescription: faker.lorem.words(20),
           cardTitle: faker.lorem.words(4),
           cardImageSource: faker.image.imageUrl(),
-          cardTags: faker.lorem.words(6).split(" "),
-          cardImageAlt: faker.lorem.words(4),
+          cardTags: faker.lorem.words(6).split(' '),
+          cardImageAlt: faker.lorem.words(4)
         },
         {
           cardDescription: faker.lorem.words(20),
           cardTitle: faker.lorem.words(4),
           cardImageSource: faker.image.imageUrl(),
-          cardTags: faker.lorem.words(6).split(" "),
-          cardImageAlt: faker.lorem.words(4),
+          cardTags: faker.lorem.words(6).split(' '),
+          cardImageAlt: faker.lorem.words(4)
         },
         {
           cardDescription: faker.lorem.words(20),
           cardTitle: faker.lorem.words(4),
           cardImageSource: faker.image.imageUrl(),
-          cardTags: faker.lorem.words(6).split(" "),
-          cardImageAlt: faker.lorem.words(4),
+          cardTags: faker.lorem.words(6).split(' '),
+          cardImageAlt: faker.lorem.words(4)
         },
         {
           cardDescription: faker.lorem.words(20),
           cardTitle: faker.lorem.words(4),
           cardImageSource: faker.image.imageUrl(),
-          cardTags: faker.lorem.words(6).split(" "),
-          cardImageAlt: faker.lorem.words(4),
+          cardTags: faker.lorem.words(6).split(' '),
+          cardImageAlt: faker.lorem.words(4)
         },
         {
           cardDescription: faker.lorem.words(20),
           cardTitle: faker.lorem.words(4),
           cardImageSource: faker.image.imageUrl(),
-          cardTags: faker.lorem.words(6).split(" "),
-          cardImageAlt: faker.lorem.words(4),
-        },
+          cardTags: faker.lorem.words(6).split(' '),
+          cardImageAlt: faker.lorem.words(4)
+        }
       ]}
     />
   )
@@ -100,59 +100,59 @@ export const PricingCards = () => {
       <Pricing
         cards={[
           {
-            background: "#36a571",
-            color: "white",
-            title: "standard",
-            price: "$49.99",
-            priceInterval: "per month",
+            background: '#36a571',
+            color: 'white',
+            title: 'standard',
+            price: '$49.99',
+            priceInterval: 'per month',
             features: [
-              "lorem ipsum",
-              "delore perscu",
-              "lorem bipud",
-              "delore perscu",
-              "lorem bipud",
+              'lorem ipsum',
+              'delore perscu',
+              'lorem bipud',
+              'delore perscu',
+              'lorem bipud'
             ],
             cta: {
-              link: "#",
-              text: "Add to cart",
-            },
+              link: '#',
+              text: 'Add to cart'
+            }
           },
           {
-            background: "#36a571",
-            color: "white",
-            title: "standard",
-            price: "$49.99",
-            priceInterval: "per month",
+            background: '#36a571',
+            color: 'white',
+            title: 'standard',
+            price: '$49.99',
+            priceInterval: 'per month',
             features: [
-              "lorem ipsum",
-              "delore perscu",
-              "lorem bipud",
-              "delore perscu",
-              "lorem bipud",
+              'lorem ipsum',
+              'delore perscu',
+              'lorem bipud',
+              'delore perscu',
+              'lorem bipud'
             ],
             cta: {
-              link: "#",
-              text: "Add to cart",
-            },
+              link: '#',
+              text: 'Add to cart'
+            }
           },
           {
-            background: "#36a571",
-            color: "white",
-            title: "standard",
-            price: "$49.99",
-            priceInterval: "per month",
+            background: '#36a571',
+            color: 'white',
+            title: 'standard',
+            price: '$49.99',
+            priceInterval: 'per month',
             features: [
-              "lorem ipsum",
-              "delore perscu",
-              "lorem bipud",
-              "delore perscu",
-              "lorem bipud",
+              'lorem ipsum',
+              'delore perscu',
+              'lorem bipud',
+              'delore perscu',
+              'lorem bipud'
             ],
             cta: {
-              link: "#",
-              text: "Add to cart",
-            },
-          },
+              link: '#',
+              text: 'Add to cart'
+            }
+          }
         ]}
       />
     </CenterHorizontalAndVertical>
@@ -160,11 +160,12 @@ export const PricingCards = () => {
 }
 
 export const DevToListCard = () => {
-  return DevCardData.map((i) => <Dev {...i} />)
+  return DevCardData.map((i) => <Dev key={i.authorName + i.title} {...i} />)
 }
 
 export const DevToBlogCard = () => {
-  return DevCardData.map((i) => <DevBlog 
+  return DevCardData.map((i) => <DevBlog
+  key={i.title + i.authorName}
   authorSrc={i.authorSrc}
   authorName={i.authorName}
   title={i.title}
@@ -175,25 +176,25 @@ export const DevToBlogCard = () => {
 const cards = [
   {
     image: image1,
-    type: "How-to",
-    title: "Incididunt duis magna consequat irure occaecat.",
-    linkUrl: "#",
-    linkText: "learn more",
+    type: 'How-to',
+    title: 'Incididunt duis magna consequat irure occaecat.',
+    linkUrl: '#',
+    linkText: 'learn more'
   },
   {
     image: image2,
-    type: "How-to",
-    title: "Labore aute Lorem elit esse.",
-    linkUrl: "#",
-    linkText: "learn more",
+    type: 'How-to',
+    title: 'Labore aute Lorem elit esse.',
+    linkUrl: '#',
+    linkText: 'learn more'
   },
   {
     image: image3,
-    type: "How-to",
-    title: "Laborum est aliqua aliqua pariatur.",
-    linkUrl: "#",
-    linkText: "learn more",
-  },
+    type: 'How-to',
+    title: 'Laborum est aliqua aliqua pariatur.',
+    linkUrl: '#',
+    linkText: 'learn more'
+  }
 ]
 export const SlackCards = () => (
   <Slack ctaText="What's new at Flack" cards={cards} />
@@ -233,107 +234,107 @@ export const BonaCard = () => (
 const webflowCards = [
   {
     image: image1,
-    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    title: 'Ullamco commodo ut consequat cillum incididunt occaecat.',
     text:
-      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
-    timestamp: "March 20, 2020",
-    overlayColour: "blue",
+      'Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.',
+    timestamp: 'March 20, 2020',
+    overlayColour: 'blue'
   },
   {
     image: image2,
-    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    title: 'Ullamco commodo ut consequat cillum incididunt occaecat.',
     text:
-      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
-    timestamp: "March 20, 2020",
-    overlayColour: "purple",
+      'Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.',
+    timestamp: 'March 20, 2020',
+    overlayColour: 'purple'
   },
   {
     image: image2,
-    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    title: 'Ullamco commodo ut consequat cillum incididunt occaecat.',
     text:
-      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
-    timestamp: "March 20, 2020",
-    overlayColour: "red",
+      'Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.',
+    timestamp: 'March 20, 2020',
+    overlayColour: 'red'
   },
   {
     image: image3,
-    title: "Ullamco commodo ut consequat cillum incididunt occaecat.",
+    title: 'Ullamco commodo ut consequat cillum incididunt occaecat.',
     text:
-      "Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.",
-    timestamp: "March 20, 2020",
-    overlayColour: "yellow",
-  },
+      'Irure eu amet laborum laborum occaecat esse. Id exercitation excepteur Lorem deserunt qui dolor tempor deserunt occaecat velit labore commodo. Elit ea et cupidatat anim. Ullamco esse velit aliquip aute nulla anim pariatur esse. Culpa proident incididunt qui in id.',
+    timestamp: 'March 20, 2020',
+    overlayColour: 'yellow'
+  }
 ]
 
 export const WebflowBlogCards = () => <Webflow cards={webflowCards} />
 
 const highlightedCards = [
   {
-    color: "#2436bf",
-    title: "Post One",
+    color: '#2436bf',
+    title: 'Post One',
     image: image4,
     text:
-      "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
-    timestamp: "5 days ago",
+      'Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .',
+    timestamp: '5 days ago',
     footerItems: [
       {
-        text: "5 mill",
-        subText: "read",
+        text: '5 mill',
+        subText: 'read'
       },
       {
-        text: "6354",
-        subText: "views",
+        text: '6354',
+        subText: 'views'
       },
       {
-        text: "54",
-        subText: "comments",
-      },
-    ],
+        text: '54',
+        subText: 'comments'
+      }
+    ]
   },
   {
-    color: "#E10661",
-    title: "Post One",
+    color: '#E10661',
+    title: 'Post One',
     image: image1,
     text:
-      "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
-    timestamp: "5 days ago",
+      'Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .',
+    timestamp: '5 days ago',
     footerItems: [
       {
-        text: "5 mill",
-        subText: "read",
+        text: '5 mill',
+        subText: 'read'
       },
       {
-        text: "6354",
-        subText: "views",
+        text: '6354',
+        subText: 'views'
       },
       {
-        text: "54",
-        subText: "comments",
-      },
-    ],
+        text: '54',
+        subText: 'comments'
+      }
+    ]
   },
   {
-    color: "#1cce31",
-    title: "Post One",
+    color: '#1cce31',
+    title: 'Post One',
     image: image2,
     text:
-      "Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .",
-    timestamp: "5 days ago",
+      'Dolore labore esse sit nulla qui eu nostrud quis esse excepteur labore. Cillum ut magna aliqua ipsum mollit quis incididunt sint est. Nisi amet officia esse culpa tempor ut consequat in. Exercitation sunt cillum sunt culpa laboris cupidatat nulla eiusmod sit elit. Non non .',
+    timestamp: '5 days ago',
     footerItems: [
       {
-        text: "5 mill",
-        subText: "read",
+        text: '5 mill',
+        subText: 'read'
       },
       {
-        text: "6354",
-        subText: "views",
+        text: '6354',
+        subText: 'views'
       },
       {
-        text: "54",
-        subText: "comments",
-      },
-    ],
-  },
+        text: '54',
+        subText: 'comments'
+      }
+    ]
+  }
 ]
 
 export const HighlightedCards = () => (

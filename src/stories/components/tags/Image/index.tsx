@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const TagGroup = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ interface IProps {
     text: string
   }>
 }
-export default function index({ tags }: IProps) {
+export default function index ({ tags }: IProps) {
   return (
     <TagGroup>
       {tags.map((t) => (

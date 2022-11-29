@@ -1,6 +1,6 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
-import React from "react"
+import React from 'react'
 
 const Form = styled.form`
   padding: 32px;
@@ -140,14 +140,14 @@ interface IProps {
   forgotPasswordText: string
 }
 
-export default function index({
+export default function index ({
   emailLabel,
   passwordLabel,
   emailPlaceholder,
   passwordPlaceholder,
   buttonText,
   retainText,
-  forgotPasswordText,
+  forgotPasswordText
 }: IProps) {
   return (
     <Form>

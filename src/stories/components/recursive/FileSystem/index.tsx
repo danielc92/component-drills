@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Folder = styled.div`
   padding-left: 16px;
@@ -21,16 +21,17 @@ const Desc = styled.p`
 const FileSystemComponent: React.FC<IFileSystem> = ({
   folderDescription,
   folderName,
-  subFolders,
+  subFolders
 }) => {
   return (
     <Folder>
       <Title>{folderName}</Title>
       <Desc>{folderDescription}</Desc>
-      {subFolders &&
-        subFolders.map((value: IFileSystem) => (
-          <FileSystemComponent {...value} />
-        ))}
+      {(subFolders.length > 0)
+        ? subFolders.map((value: IFileSystem) => (
+          <FileSystemComponent key={value.folderName + value.folderDescription} {...value} />
+        ))
+        : null}
     </Folder>
   )
 }

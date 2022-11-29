@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
-const brand = "#FFCC00"
+const brand = '#FFCC00'
 const Section = styled.section`
   background: #f2f2f2;
 `
@@ -73,11 +73,11 @@ interface IProps {
   ctaSubHeader: string
   ctaButtonText: string
 }
-export default function index({
+export default function index ({
   image,
   ctaHeader,
   ctaSubHeader,
-  ctaButtonText,
+  ctaButtonText
 }: IProps) {
   return (
     <Section>

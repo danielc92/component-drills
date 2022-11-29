@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import React from "react"
+import styled from 'styled-components'
+import React from 'react'
 
 const Section = styled.section``
 
@@ -16,7 +16,7 @@ const TileGrid = styled.div`
 `
 const Tile = styled.div<{ background: string }>`
   text-align: center;
-  background: ${(props) => (props.background ? props.background : "")};
+  background: ${(props) => (props.background ? props.background : '')};
   padding: 16px;
   border-radius: 4px;
 
@@ -45,10 +45,10 @@ interface IProps {
     background: string
   }>
 }
-export default function index({ data }: IProps) {
+export default function index ({ data }: IProps) {
   return (
     <Section>
-      (x){" "}
+      (x){' '}
       <Container>
         <TileGrid>
           {data.map((x) => (

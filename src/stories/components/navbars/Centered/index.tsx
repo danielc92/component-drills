@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const NavigationWrapper = styled.nav`
   padding: 8px 24px;
@@ -37,7 +37,7 @@ const NavigationItem = styled.a`
   }
 `
 
-export default function index() {
+export default function index () {
   return (
     <NavigationWrapper>
       <NavigationItems>

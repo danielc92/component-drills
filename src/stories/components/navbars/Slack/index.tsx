@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const NavbarWrapper = styled.section`
   display: flex;
@@ -49,21 +49,21 @@ const Button = styled.a<{ primary?: boolean }>`
 
   border-radius: 4px;
   font-weight: bold;
-  text-transform: ${(props) => (props.primary ? "uppercase" : "")};
-  color: ${(props) => (props.primary ? "white" : "black")};
-  background: ${(props) => (props.primary ? "#611f69" : "transparent")};
+  text-transform: ${(props) => (props.primary ? 'uppercase' : '')};
+  color: ${(props) => (props.primary ? 'white' : 'black')};
+  background: ${(props) => (props.primary ? '#611f69' : 'transparent')};
 `
 interface IProps {
   signInButton: string
-  links: Array<{ url: string; text: string }>
+  links: Array<{ url: string, text: string }>
   getStartedButton: string
   logoText: string
 }
-export default function index({
+export default function index ({
   signInButton,
   links,
   getStartedButton,
-  logoText,
+  logoText
 }: IProps) {
   return (
     <NavbarWrapper>

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   max-width: 750px;
@@ -74,13 +74,13 @@ interface IProps {
   imageText: string
   imageSrc: string
 }
-export default function index({
+export default function index ({
   title,
   author,
   date,
   content,
   imageText,
-  imageSrc,
+  imageSrc
 }: IProps) {
   return (
     <Wrapper>
@@ -98,10 +98,10 @@ export default function index({
       </Image>
       <Content>
         {content.map((i) => {
-          if (i.node === "paragraph") {
+          if (i.node === 'paragraph') {
             return <ParagraphNode>{i.value}</ParagraphNode>
           }
-          if (i.node === "header") {
+          if (i.node === 'header') {
             return <HeadingNode>{i.value}</HeadingNode>
           }
           return <span></span>

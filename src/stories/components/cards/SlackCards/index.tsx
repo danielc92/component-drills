@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Section = styled.section``
 
@@ -67,7 +67,7 @@ interface IProps {
     linkText: string
   }>
 }
-export default function index({ ctaText, cards }: IProps) {
+export default function index ({ ctaText, cards }: IProps) {
   return (
     <Section>
       <Header>{ctaText}</Header>

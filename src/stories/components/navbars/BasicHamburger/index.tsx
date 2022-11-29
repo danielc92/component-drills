@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const NavigationWrapper = styled.nav<{ background: string }>`
   padding: 8px 24px;
@@ -62,7 +62,7 @@ const NavigationItem = styled.a<{ backgroundHover: string }>`
 `
 
 const HiddenLinkItems = styled.div<{ show: boolean }>`
-  display: ${(props) => (props.show ? "" : "none")};
+  display: ${(props) => (props.show ? '' : 'none')};
   position: absolute;
   top: 24px;
   right: 0;
@@ -81,14 +81,13 @@ interface IProps {
   background: string
   backgroundHover: string
 }
-export default function index({
+export default function index ({
   iconSrc,
   links,
   color,
   background,
-  backgroundHover,
+  backgroundHover
 }: IProps) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [menuState, setMenu] = useState(false)
   return (
     <NavigationWrapper color={color} background={background}>

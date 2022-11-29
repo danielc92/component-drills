@@ -1,10 +1,10 @@
-import React from "react"
-import { CenterHorizontalAndVertical } from "./layout"
-import Basic from "../components/notes/Basic"
-import BasicWithHeader from "../components/notes/Header"
+import React from 'react'
+import { CenterHorizontalAndVertical } from './layout'
+import Basic from '../components/notes/Basic'
+import BasicWithHeader from '../components/notes/Header'
 
 export default {
-  title: "Notes",
+  title: 'Notes'
 }
 
 export const BasicDefault = () => (

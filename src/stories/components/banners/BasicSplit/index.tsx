@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: flex;
@@ -69,11 +69,11 @@ interface IProps {
   imageSrc: string
 }
 
-export default function index({
+export default function index ({
   title,
   subTitle,
   buttonText,
-  imageSrc,
+  imageSrc
 }: IProps) {
   return (
     <Wrapper>

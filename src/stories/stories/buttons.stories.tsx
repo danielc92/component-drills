@@ -1,14 +1,14 @@
-import React from "react"
-import Dev from "../components/buttons/DevButton"
-import OutlookButton from "../components/buttons/OutlookButton"
-import StorybookButton from "../components/buttons/StorybookButton"
-import styled from "styled-components"
-import { withKnobs, text, boolean } from "@storybook/addon-knobs"
+import React from 'react'
+import Dev from '../components/buttons/DevButton'
+import OutlookButton from '../components/buttons/OutlookButton'
+import StorybookButton from '../components/buttons/StorybookButton'
+import styled from 'styled-components'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 
 export default {
-  title: "Buttons",
+  title: 'Buttons',
   component: OutlookButton,
-  decorators: [withKnobs],
+  decorators: [withKnobs]
 }
 
 // A wrapper to center buttons
@@ -38,8 +38,8 @@ export const DevButton = () => (
 )
 
 export const StorybookPrimary = () => {
-  const dynamicText = text("Button text", "Click me")
-  const dynamicSecondary = boolean("Secondary", false)
+  const dynamicText = text('Button text', 'Click me')
+  const dynamicSecondary = boolean('Secondary', false)
   return (
     <ButtonWrapper>
       <StorybookButton text={dynamicText} secondary={dynamicSecondary} />

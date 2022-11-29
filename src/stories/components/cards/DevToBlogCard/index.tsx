@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Card = styled.div`
   margin: 16px auto 16px auto;
@@ -88,12 +88,12 @@ interface IProps {
   tagline: string
   text: string
 }
-export default function index({
+export default function index ({
   authorSrc,
   authorName,
   title,
   tagline,
-  text,
+  text
 }: IProps) {
   return (
     <Card>

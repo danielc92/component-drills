@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const Gallery = styled.section`
   position: fixed;
@@ -15,14 +15,14 @@ const Container = styled.div`
   background: #303030;
   margin: 0 auto;
 `
-const Image = styled.img<{ zoomed: boolean; grayscale: boolean }>`
+const Image = styled.img<{ zoomed: boolean, grayscale: boolean }>`
   width: 100%;
   height: auto;
   max-height: 600px;
   object-fit: cover;
-  transform: ${(props) => (props.zoomed ? "scale(1.3)" : "scale(1.0)")};
+  transform: ${(props) => (props.zoomed ? 'scale(1.3)' : 'scale(1.0)')};
   transition: all 0.25s ease;
-  filter: ${(props) => (props.grayscale ? "grayscale()" : "")};
+  filter: ${(props) => (props.grayscale ? 'grayscale()' : '')};
 `
 const Controls = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ const ArrowLeft = styled.button`
   cursor: pointer;
 `
 const ArrowRight = styled.button`
-  border: none;
+           border: none;
   position: absolute;
   padding: 32px 16px;
   border-bottom-left-radius: 6px;
@@ -85,23 +85,20 @@ const ArrowRight = styled.button`
 `
 
 interface IProps {
-  images: Array<any>
+  images: any[]
 }
-export default function index({ images }: IProps) {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+export default function index ({ images }: IProps) {
   const [current, setcurrent] = useState(0)
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [zoomed, setZoomed] = useState(false)
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [grayscale, setGray] = useState(false)
-  const nextImage = () => {
+  const nextImage = (): void => {
     if (current === images.length - 1) {
       setcurrent(0)
     } else {
       setcurrent(current + 1)
     }
   }
-  const previousImage = () => {
+  const previousImage = (): void => {
     if (current === 0) {
       setcurrent(images.length - 1)
     } else {
@@ -131,8 +128,8 @@ export default function index({ images }: IProps) {
             grayscale={grayscale}
             src={images[current]}
           />
-          <ArrowLeft onClick={previousImage}>{"<"}</ArrowLeft>
-          <ArrowRight onClick={nextImage}>{">"}</ArrowRight>
+          <ArrowLeft onClick={previousImage}>{'<'}</ArrowLeft>
+          <ArrowRight onClick={nextImage}>{'>'}</ArrowRight>
         </ImageContainer>
       </Container>
     </Gallery>

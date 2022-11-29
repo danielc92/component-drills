@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Banner = styled.div<{ background: string }>`
   background: ${(props) => props.background};
@@ -35,22 +35,24 @@ interface IProps {
   ctaButtonHref: string
   ctaButtonText: string
 }
-export default function index({
+export default function index ({
   header,
   subHeader,
   background,
   ctaButtonHref,
-  ctaButtonText,
+  ctaButtonText
 }: IProps) {
   return (
     <Banner background={background}>
       <Header>{header}</Header>
       <SubHeader>{subHeader}</SubHeader>
-      {ctaButtonText ? (
+      {ctaButtonText
+        ? (
         <Button background={background} href={ctaButtonHref}>
           {ctaButtonText}
         </Button>
-      ) : null}
+          )
+        : null}
     </Banner>
   )
 }

@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Wrapper = styled.section<{ imageSrc: string }>`
   display: flex;
@@ -42,18 +42,18 @@ interface IProps {
   ctaLevel3: string
   backgroundImageSrc: string
 }
-export default function index({
+export default function index ({
   ctaLevel1,
   ctaLevel2,
   ctaLevel3,
-  backgroundImageSrc,
+  backgroundImageSrc
 }: IProps) {
   return (
     <Wrapper imageSrc={backgroundImageSrc}>
       <Content>
-        <BigText delay={".5s"}>{ctaLevel1}</BigText>
-        <BigText delay={"0.8s"}>{ctaLevel2}</BigText>
-        <BigText delay={"1.1s"}>{ctaLevel3}</BigText>
+        <BigText delay={'.5s'}>{ctaLevel1}</BigText>
+        <BigText delay={'0.8s'}>{ctaLevel2}</BigText>
+        <BigText delay={'1.1s'}>{ctaLevel3}</BigText>
       </Content>
     </Wrapper>
   )

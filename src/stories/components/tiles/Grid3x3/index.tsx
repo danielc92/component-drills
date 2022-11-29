@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Grid = styled.div<{ gapless?: boolean }>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 
-  gap: ${(props) => (props.gapless ? "" : "24px")};
+  gap: ${(props) => (props.gapless ? '' : '24px')};
   max-width: 800px;
 `
 
@@ -21,9 +21,9 @@ const GridTile = styled.div<{
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-image: url(${(props) => (props.imageSrc ? props.imageSrc : "")});
-  grid-row-start: ${(props) => (props.doubleSize ? "span 2" : "")};
-  grid-column-start: ${(props) => (props.doubleSize ? "span 2" : "")};
+  background-image: url(${(props) => (props.imageSrc ? props.imageSrc : '')});
+  grid-row-start: ${(props) => (props.doubleSize ? 'span 2' : '')};
+  grid-column-start: ${(props) => (props.doubleSize ? 'span 2' : '')};
 `
 
 const GridTitle = styled.h2`
@@ -41,7 +41,7 @@ interface IProps {
   }>
   gapless?: boolean
 }
-export default function index({ items, gapless }: IProps) {
+export default function index ({ items, gapless }: IProps) {
   return (
     <Grid gapless={gapless}>
       {items.map((i) => (

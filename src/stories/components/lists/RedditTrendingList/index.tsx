@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Card = styled.div`
   border-radius: 4px;
@@ -55,9 +55,9 @@ const Members = styled.p`
 
 interface IProps {
   title: string
-  items: Array<{ imageSrc: string; members: string; name: string }>
+  items: Array<{ imageSrc: string, members: string, name: string }>
 }
-export default function index({ title, items }: IProps) {
+export default function index ({ title, items }: IProps) {
   return (
     <Card>
       <Title>{title}</Title>

@@ -1,24 +1,23 @@
-import React from "react"
-import Basic from "../components/banners/Basic"
-import Target from "../components/banners/TargetSplit"
-import ImageBanner from "../components/banners/ImageBanner"
-import GradientBanner from "../components/banners/Gradient"
-import Split from "../components/banners/BasicSplit"
-import Commbank from "../components/banners/Commbank"
-import Outlook from "../components/banners/Outlook"
-import Monday from "../components/banners/Monday"
-import image1 from "./images/etienne-martin-2_K82gx9Uk8-unsplash.jpg"
-import image2 from "./images/omar-lopez-rwF_pJRWhAI-unsplash.jpg"
-import image4 from "./images/korie-cull-IzIME1jwjCY-unsplash.jpg"
+import React from 'react'
+import Basic from '../components/banners/Basic'
+import Target from '../components/banners/TargetSplit'
+import ImageBanner from '../components/banners/ImageBanner'
+import GradientBanner from '../components/banners/Gradient'
+import Split from '../components/banners/BasicSplit'
+import Commbank from '../components/banners/Commbank'
+import Outlook from '../components/banners/Outlook'
+import Monday from '../components/banners/Monday'
+import image1 from './images/etienne-martin-2_K82gx9Uk8-unsplash.jpg'
+import image2 from './images/omar-lopez-rwF_pJRWhAI-unsplash.jpg'
+import image4 from './images/korie-cull-IzIME1jwjCY-unsplash.jpg'
 
 export default {
-  title: "Banners",
+  title: 'Banners'
   // component: Basic
 }
 
 export const BasicBannerWithBlueBackground = () => (
   <Basic
-
 
     header="Aute laboris et"
     subHeader="Sunt do ut sint ipsum esse est irure adipisicing pariatur veniam anim."
@@ -110,11 +109,11 @@ export const TargetSplitBanner = () => (
   <Target
     title="Exercitation nulla duis"
     links={[
-      { text: "Cupidatat duis.", url: "#" },
-      { text: "Incididunt.", url: "#" },
-      { text: "Eu anim Lorem dolor.", url: "#" },
-      { text: "Tempor tempor ea culpa.", url: "#" },
-      { text: "Nostrud in cupidatat.", url: "#" },
+      { text: 'Cupidatat duis.', url: '#' },
+      { text: 'Incididunt.', url: '#' },
+      { text: 'Eu anim Lorem dolor.', url: '#' },
+      { text: 'Tempor tempor ea culpa.', url: '#' },
+      { text: 'Nostrud in cupidatat.', url: '#' }
     ]}
     imageSrc={image4}
   />

@@ -1,12 +1,12 @@
-import React from "react"
-import Basic from "../components/navbars/Basic"
-import BasicHamburger from "../components/navbars/BasicHamburger"
-import Centered from "../components/navbars/Centered"
-import Slack from "../components/navbars/Slack"
-import Drawer from "../components/navbars/BasicDrawer"
-import menuIcon from "./svg/menu.svg"
+import React from 'react'
+import Basic from '../components/navbars/Basic'
+import BasicHamburger from '../components/navbars/BasicHamburger'
+import Centered from '../components/navbars/Centered'
+import Slack from '../components/navbars/Slack'
+import Drawer from '../components/navbars/BasicDrawer'
+import menuIcon from './svg/menu.svg'
 export default {
-  title: "Navbars",
+  title: 'Navbars'
 }
 
 export const BasicWithHamburger = () => (
@@ -16,11 +16,11 @@ export const BasicWithHamburger = () => (
     backgroundHover="#f1f1f1"
     iconSrc={menuIcon}
     links={[
-      { url: "#", text: "Home" },
-      { url: "#", text: "Resources" },
-      { url: "#", text: "Contact" },
-      { url: "#", text: "About" },
-      { url: "#", text: "News" },
+      { url: '#', text: 'Home' },
+      { url: '#', text: 'Resources' },
+      { url: '#', text: 'Contact' },
+      { url: '#', text: 'About' },
+      { url: '#', text: 'News' }
     ]}
   />
 )
@@ -44,11 +44,11 @@ export const BasicDrawer = () => (
   background="#e54e4e" color="#fff"
     menuIcon={menuIcon}
     links={[
-      { url: "#", text: "Home" },
-      { url: "#", text: "Resources" },
-      { url: "#", text: "Contact" },
-      { url: "#", text: "About" },
-      { url: "#", text: "News" },
+      { url: '#', text: 'Home' },
+      { url: '#', text: 'Resources' },
+      { url: '#', text: 'Contact' },
+      { url: '#', text: 'About' },
+      { url: '#', text: 'News' }
     ]}
   />
 )
@@ -56,11 +56,11 @@ export const SlackNavbar = () => (
   <Slack
   logoText="Logo text"
     links={[
-      { text: "Why flack?", url: "#" },
-      { text: "Enterprise", url: "#" },
-      { text: "Solutions", url: "#" },
-      { text: "Pricing", url: "#" },
-      { text: "Resources", url: "#" },
+      { text: 'Why flack?', url: '#' },
+      { text: 'Enterprise', url: '#' },
+      { text: 'Solutions', url: '#' },
+      { text: 'Pricing', url: '#' },
+      { text: 'Resources', url: '#' }
     ]}
     getStartedButton="get started"
     signInButton="Sign In"

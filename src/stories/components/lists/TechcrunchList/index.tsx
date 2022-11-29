@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Container = styled.div`
   max-width: 750px;
@@ -49,11 +49,11 @@ interface IProps {
     image: string
   }>
 }
-export default function index({ articles }: IProps) {
+export default function index ({ articles }: IProps) {
   return (
     <Container>
       {articles.map((a) => (
-        <Article>
+        <Article key={a.title + a.author}>
           <Column>
             <Title>{a.title}</Title>
             <Author>{a.author}</Author>

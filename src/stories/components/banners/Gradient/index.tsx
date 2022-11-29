@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const gradients = {
   kingYna: `background: #1a2a6c;  /* fallback for old browsers */
@@ -23,7 +23,7 @@ background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, F
     background: #0F2027; 
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); 
-`,
+`
 }
 
 const Banner = styled.div<{ gradient: string }>`
@@ -46,9 +46,9 @@ const SubHeader = styled.p`
 interface IProps {
   header: string
   subHeader: string
-  type: "kingYna" | "quepal" | "sublimeLight" | "moonlitAsteroid" | "yoda"
+  type: 'kingYna' | 'quepal' | 'sublimeLight' | 'moonlitAsteroid' | 'yoda'
 }
-export default function index({ header, subHeader, type }: IProps) {
+export default function index ({ header, subHeader, type }: IProps) {
   return (
     <Banner gradient={gradients[type]}>
       <Header>{header}</Header>

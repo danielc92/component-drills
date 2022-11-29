@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Card = styled.div`
   width: 240px;
@@ -78,7 +78,7 @@ interface IProps {
   statComment: string
   statView: string
 }
-export default function index({
+export default function index ({
   title,
   authorImageSrc,
   backgroundImageSrc,
@@ -87,7 +87,7 @@ export default function index({
   heartImageSrc,
   statLove,
   statComment,
-  statView,
+  statView
 }: IProps) {
   return (
     <Card>

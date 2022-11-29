@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Button = styled.a`
   border-radius: 2px;
@@ -25,6 +25,6 @@ interface IProps {
   buttonText: string
   buttonHref: string
 }
-export default function index({ buttonText, buttonHref }: IProps) {
+export default function index ({ buttonText, buttonHref }: IProps) {
   return <Button href={buttonHref}>{buttonText}</Button>
 }

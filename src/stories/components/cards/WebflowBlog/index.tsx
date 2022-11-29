@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components'
 
 const Grid = styled.section`
   display: grid;
@@ -69,7 +69,7 @@ interface IProps {
     image: string
   }>
 }
-export default function index({ cards }: IProps) {
+export default function index ({ cards }: IProps) {
   return (
     <Grid>
       {cards.map((c) => (
